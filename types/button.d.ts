@@ -29,7 +29,7 @@ export declare class AlButton extends AlbatroUIComponent {
   /** Disable the button */
   disabled: boolean
 
-  /** Button icon, accepts an icon name of Element icon component */
+  /** Button icon, accepts an icon name of Albatro icon component */
   icon: string
 
   /** Same as native button's autofocus */
