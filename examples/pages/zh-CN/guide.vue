@@ -78,11 +78,11 @@
         navsData: [
           {
             path: '/design',
-            name: '<%= 1 >'
+            name: '设计原则'
           },
           {
             path: '/nav',
-            name: '<%= 2 >'
+            name: '导航'
           }
         ]
       };

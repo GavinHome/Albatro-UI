@@ -12,7 +12,7 @@
   "typings": "types/index.d.ts",
   "private": true,
   "scripts": {
-    "build:file": "node build/bin/i18n.js",
+    "build:file": "node build/i18n.js",
     "serve": "vue-cli-service serve",
     "dev": "npm run build:file & vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -39,6 +39,7 @@
   "style": "lib/theme-albatro/index.css",
   "dependencies": {
     "core-js": "^2.6.5",
+    "throttle-debounce": "^1.0.1",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",

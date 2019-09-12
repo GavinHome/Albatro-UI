@@ -32,7 +32,7 @@
   <div class="page-container page-theme-preview" ref="themePreview">
     <section class="display">
       <el-button type="text" icon="el-icon-back" @click="navBack">
-        <%= 1 >
+        返回
       </el-button>
       <h3>{{previewConfig.name}}</h3>
       <!--<basic-tokens-preview>

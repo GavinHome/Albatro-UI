@@ -6,14 +6,14 @@
     padding-top: 20px;
 
     h1 {
-      font-size: <%= titleSize >px;
+      font-size: 34px;
       margin: 0;
       line-height: 48px;
       color: #555;
     }
 
     p {
-      font-size: <%= paraSize >px;
+      font-size: 18px;
       line-height: 28px;
       color: #888;
       margin: 10px 0 5px;
@@ -286,8 +286,8 @@
   <div>
     <div class="banner">
       <div class="banner-desc">
-        <h1><%= 1 ></h1>
-        <p><%= 2 ></p>
+        <h1>网站快速成型工具</h1>
+        <p>Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库</p>
       </div>
     </div>
     <div class="jumbotron" ref="indexMainImg">
@@ -319,48 +319,48 @@
         <li>
           <div class="card">
             <img src="@/assets/images/guide.png" alt="">
-            <h3><%= 3 ></h3>
-            <p><%= 4 ></p>
+            <h3>指南</h3>
+            <p>了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。</p>
             <router-link
               active-class="active"
-              to="/<%= lang >/guide/design"
-              exact><%= 5 >
+              to="/zh-CN/guide/design"
+              exact>查看详情
             </router-link>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="@/assets/images/component.png" alt="">
-            <h3><%= 6 ></h3>
-            <p><%= 7 ></p>
+            <h3>组件</h3>
+            <p>使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。</p>
             <router-link
               active-class="active"
-              to="/<%= lang >/component/layout"
-              exact><%= 5 >
+              to="/zh-CN/component/layout"
+              exact>查看详情
             </router-link>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="@/assets/images/theme-index-icon.svg" alt="">
-            <h3><%= 10 ></h3>
-            <p><%= 11 ></p>
+            <h3>主题</h3>
+            <p>在线主题编辑器，可视化定制和管理站点主题、组件样式</p>
             <router-link
               active-class="active"
-              to="/<%= lang >/theme"
-              exact><%= 5 >
+              to="/zh-CN/theme"
+              exact>查看详情
             </router-link>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="@/assets/images/resource.png" alt="">
-            <h3><%= 8 ></h3>
-            <p><%= 9 ></p>
+            <h3>资源</h3>
+            <p>下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计效率。</p>
             <router-link
               active-class="active"
-              to="/<%= lang >/resource"
-              exact><%= 5 >
+              to="/zh-CN/resource"
+              exact>查看详情
             </router-link>
           </div>
         </li>
@@ -370,7 +370,7 @@
       <div class="intro-banner">
         <img src="@/assets/images/theme-intro.png" alt="">
         <div class="intro-text">
-          <p><%= 12 ></p>
+          <p>主题定制功能上线</p>
         </div>
       </div>
       <div class="mask"></div>
@@ -389,8 +389,8 @@
         <img src="@/assets/images/intro-theme-b.png" alt="">
           <div class="title">
             <div>
-              <p><%= 13 ></p>
-              <p><%= 14 ></p>
+              <p>点击开始编辑</p>
+              <p>尝试您的新主题</p>
             </div>
           </div>
       </div>
