@@ -18,6 +18,10 @@ module.exports = {
             .rule('ts')
             .include.add(/packages/).end()
             .include.add(/examples/).end()
+            
+        config.module
+            .rule('js')
+            .include.add(/src/).end()
 
         // config.module
         //     .rule('md')            

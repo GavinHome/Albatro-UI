@@ -1,15 +1,11 @@
 var navConfig = require('@/nav.config.json');
 var langs = require('@/i18n/route');
 const load = function (lang: string, path: string) {
-    return () => {
-        return (r: any) => require.ensure([], () => r(require(`@/pages/${lang}/${path}.vue`)));
-    }
+    return (r: any) => require.ensure([], () => r(require(`./pages/${lang}/${path}.vue`)));
 }
 
 const loadDocs = function (lang: string, path: string) {
-    return () => {
-        return (r: any) => require.ensure([], () => r(require(`@/docs/${lang}${path}.md`)));
-    }
+    return (r: any) => require.ensure([], () => r(require(`./docs/${lang}${path}.md`)));
 }
 
 function getRoute(page: any, lang: any, index: any) {
@@ -122,8 +118,8 @@ langs.forEach((lang: any) => {
     route = route.concat(generateMiscRoutes(lang.lang));
 });
 
-let userLanguage = localStorage.getItem('Albatro_LANGUAGE') || window.navigator.language || langs[0];
-let defaultPath = userLanguage;
+let userLanguage = localStorage.getItem('Albatro_LANGUAGE') || window.navigator.language || langs[0].lang;
+let defaultPath = '/' + userLanguage;
 
 route = route.concat([{
     path: '/',

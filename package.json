@@ -18,7 +18,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --coverage -u || exit 0",
-    "lib": "vue-cli-service build --target lib --name albatro-ui --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name albatro-ui --dest lib src/index.js",
     "component": "tsc packages/entry.ts && vue-cli-service build --target lib --name albatro-ui --dest lib packages/entry.js"
   },
   "repository": {

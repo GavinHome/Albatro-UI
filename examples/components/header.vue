@@ -6,12 +6,12 @@
           <router-link :to="`/${ lang }`">
             <!-- logo -->
             <slot>
-              <!-- <img src="../assets/images/element-logo.svg" alt="element-logo" class="nav-logo" />
+              <img src="../assets/images/element-logo.svg" alt="element-logo" class="nav-logo" />
               <img
                 src="../assets/images/element-logo-small.svg"
                 alt="element-logo"
                 class="nav-logo-small"
-              /> -->
+              />
             </slot>
           </router-link>
         </h1>
