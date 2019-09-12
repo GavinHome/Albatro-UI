@@ -19,11 +19,17 @@ module.exports = {
             .rule('ts')
             .include.add(/packages/).end()
             .include.add(/examples/).end()
-            .use('babel')
-            .loader('babel-loader')
-            .tap(options => {
-                // 修改它的选项...
-                return options
-            })
+            // .use('babel')
+            // .loader('babel-loader')
+            // .tap(options => {
+            //     // 修改它的选项...
+            //     return options
+            // })
+
+        // config.module
+        //     .rule('md')            
+        //     .include.add(/examples/).end()
+        //     .use('babel')
+        //     .loader('babel-loader')
     }
 }

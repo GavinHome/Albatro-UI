@@ -12,8 +12,9 @@
   "typings": "types/index.d.ts",
   "private": true,
   "scripts": {
+    "build:file": "node build/bin/i18n.js",
     "serve": "vue-cli-service serve",
-    "dev": "vue-cli-service serve",
+    "dev": "npm run build:file & vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --coverage -u || exit 0",
