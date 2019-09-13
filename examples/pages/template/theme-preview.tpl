@@ -35,34 +35,34 @@
         <%= 1 >
       </el-button>
       <h3>{{previewConfig.name}}</h3>
-      <!--<basic-tokens-preview>
-      </basic-tokens-preview>-->
+      <basic-tokens-preview>
+      </basic-tokens-preview>
       <components-preview>
       </components-preview>
     </section>
     <aside class="side">
       <section class="editor" :style="{top: `${editorTop}px`, height: `${editorHeight}px`}" :class="{'fixed': isFixed}">
-        <!--<theme-configurator
+        <theme-configurator
           :isOfficial="isOfficial"
           :themeConfig="themeConfig"
           :previewConfig="previewConfig"
           :onUserConfigUpdate="onUserConfigUpdate"
         >
-        </theme-configurator>-->
+        </theme-configurator>
       </section>
     </aside>
   </div>
 </template>
 <script>
 //import bus from '../../bus.js';
-//import ThemeConfigurator from '../../components/theme-configurator';
-//import ComponentsPreview from '../../components/theme/components-preview';
-//import BasicTokensPreview from '../../components/theme/basic-tokens-preview';
-//import {  loadPreviewFromLocal,  loadUserThemeFromLocal,  saveUserThemeToLocal } from '../../components/theme/localstorage';
-//import {  getThemeConfigObject } from '../../components/theme/utils';
-//import {  ACTION_APPLY_THEME} from '../../components/theme/constant.js';
+import ThemeConfigurator from '../../components/theme-configurator';
+import ComponentsPreview from '../../components/theme/components-preview';
+import BasicTokensPreview from '../../components/theme/basic-tokens-preview';
+import {  loadPreviewFromLocal,  loadUserThemeFromLocal,  saveUserThemeToLocal } from '../../components/theme/localstorage';
+import {  getThemeConfigObject } from '../../components/theme/utils';
+import {  ACTION_APPLY_THEME} from '../../components/theme/constant.js';
 import throttle from 'throttle-debounce/throttle';
-//import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
+import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
 
 const maxUserTheme = 8;
 
@@ -181,7 +181,7 @@ export default {
     const themeConfig = getThemeConfigObject(previewConfig.theme);
     if (themeConfig) {
       this.themeConfig = themeConfig;
-      //bus.$emit(ACTION_APPLY_THEME, themeConfig);
+      this.$event.$emit(ACTION_APPLY_THEME, themeConfig);
     }
   }
 };

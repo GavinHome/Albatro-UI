@@ -80,10 +80,10 @@
   </div>
 </template>
 <script>
-//import ThemeCard from '../../components/theme/theme-card.vue';
-//import { themeList, eleThemeList } from '../../components/theme/theme-list.js';
-//import { saveUserThemeToLocal, loadUserThemeFromLocal } from '../../components/theme/localstorage';
-//import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
+import ThemeCard from '../../components/theme/theme-card.vue';
+import { themeList, eleThemeList } from '../../components/theme/theme-list.js';
+import { saveUserThemeToLocal, loadUserThemeFromLocal } from '../../components/theme/localstorage';
+import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
 
 const maxUserTheme = 8;
 

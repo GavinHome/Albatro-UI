@@ -1,5 +1,5 @@
-var navConfig = require('@/nav.config.json');
-var langs = require('@/i18n/route');
+var navConfig = require("@/nav.config.json");
+var langs = require("@/i18n/route");
 const load = function (lang: string, path: string) {
     return (r: any) => require.ensure([], () => r(require(`./pages/${lang}/${path}.vue`)));
 }

@@ -23,10 +23,19 @@ module.exports = {
             .rule('js')
             .include.add(/src/).end()
 
-        // config.module
-        //     .rule('md')            
-        //     .include.add(/examples/).end()
-        //     .use('babel')
-        //     .loader('babel-loader')
+        config.module
+            .rule('md')
+            .test(/\.md$/)
+            .include.add(/examples/).end()
+            .use('vue')
+            .loader('vue-loader')
+            .options({
+                preserveWhitespace:true
+            }).end()
+
+        config.module
+            .rule('md')
+            .use('custom')
+            .loader(path.resolve('build', './md-loader/index.js')).end()
     }
 }

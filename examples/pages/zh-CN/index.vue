@@ -399,7 +399,7 @@
 </template>
 <script>
   import throttle from 'throttle-debounce/throttle';
-  //import { addClass, removeClass } from 'element-ui/src/utils/dom';
+  import { addClass, removeClass } from 'element-ui/src/utils/dom';
   
   export default {
     created() {
@@ -418,7 +418,7 @@
         this.mainImgOffset = calHeight;
       },
       hideIntroB() {
-        //removeClass(document.body, 'el-loading-parent--hidden');
+        removeClass(document.body, 'el-loading-parent--hidden');
         localStorage.setItem('KNOW_THEME', 'true');
         this.showIntroB = false;
       },
@@ -447,7 +447,7 @@
       window.addEventListener('scroll', this.throttledHandleScroll);
       if (localStorage.getItem('KNOW_THEME')) return;
       this.showIntroA = true;
-      //addClass(document.body, 'el-loading-parent--hidden');
+      addClass(document.body, 'el-loading-parent--hidden');
     }
   };
 </script>

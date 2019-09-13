@@ -186,7 +186,7 @@
       },
 
       goAnchor() {
-        if (location.href.match(/#/g).length > 1) {
+        if (location.href.indexOf("#")> -1 && location.href.match(/#/g).length > 1) {
           const anchor = location.href.match(/#[^#]+$/g);
           if (!anchor) return;
           const elm = document.querySelector(anchor[0]);
@@ -207,7 +207,7 @@
           this.showHeader = true;
         }
         if (!this.navFaded) {
-          //bus.$emit('fadeNav');
+          this.$event.$emit('fadeNav');
         }
         this.scrollTop = scrollTop;
       }
@@ -218,9 +218,9 @@
       }
     },
     created() {
-      //bus.$on('navFade', val => {
-      //  this.navFaded = val;
-      //});
+      this.$event.$on('navFade', val => {
+       this.navFaded = val;
+      });
     },
     mounted() {
       this.componentScrollBar = this.$refs.componentScrollBar;

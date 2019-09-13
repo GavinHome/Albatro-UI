@@ -13,13 +13,8 @@ import { Component, Vue, Watch } from "vue-property-decorator";
 //import { use } from "../src/locale";
 //import zhLocale from "../src/locale/lang/zh-CN";
 
-import MainFooter from "./components/footer.vue";
-import MainHeader from "./components/header.vue";
-
 @Component({
   components: {
-    MainHeader,
-    MainFooter
   }
 })
 export default class App extends Vue {

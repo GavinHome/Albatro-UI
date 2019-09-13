@@ -39,11 +39,11 @@
       <h2><%= 1 ></h2>
       <ul>
         <li class="theme-card" v-for="item in officialTheme" :key="item.name">
-          <!--<theme-card 
+          <theme-card 
             type="official" 
             :config="item"
             @action="onAction"
-          ></theme-card>-->
+          ></theme-card>
         </li>
       </ul>
     </section>
@@ -51,18 +51,18 @@
       <h2><%= 2 > ({{userThemeCount}}/{{maxUserTheme}})</h2>
       <ul>
         <li class="theme-card" v-if="showUserUpload">
-          <!--<theme-card 
+          <theme-card 
             type="upload" 
             :config="{name: 'upload'}"
             @action="onAction"
-          ></theme-card>-->
+          ></theme-card>
         </li>
         <li class="theme-card" v-for="item in displayUserTheme" :key="item.name">
-          <!--<theme-card 
+          <theme-card 
             type="user"
             :config="item"
             @action="onAction"
-          ></theme-card>-->
+          ></theme-card>
         </li>
       </ul>
     </section>
@@ -80,10 +80,10 @@
   </div>
 </template>
 <script>
-//import ThemeCard from '../../components/theme/theme-card.vue';
-//import { themeList, eleThemeList } from '../../components/theme/theme-list.js';
-//import { saveUserThemeToLocal, loadUserThemeFromLocal } from '../../components/theme/localstorage';
-//import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
+import ThemeCard from '../../components/theme/theme-card.vue';
+import { themeList, eleThemeList } from '../../components/theme/theme-list.js';
+import { saveUserThemeToLocal, loadUserThemeFromLocal } from '../../components/theme/localstorage';
+import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
 
 const maxUserTheme = 8;
 
