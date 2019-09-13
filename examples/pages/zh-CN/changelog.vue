@@ -140,7 +140,7 @@
       <el-button class="fr">
         <a href="https://github.com/GavinHome/Albatro-UI/releases" target="_blank">GitHub Releases</a>
       </el-button>
-      <%= 1 >
+      更新日志
     </div>
     <ul class="timeline" ref="timeline">
     </ul>
@@ -148,7 +148,7 @@
   </div>
 </template>
 <script>
-  //import ChangeLog from '../../../CHANGELOG.<%= 2 >.md';
+  //import ChangeLog from '../../../CHANGELOG.zh-CN.md';
 
   export default {
     components: {

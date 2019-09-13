@@ -36,7 +36,7 @@
 <template>
   <div class="page-container page-theme">
     <section class="theme-section">
-      <h2><%= 1 ></h2>
+      <h2>官方主题</h2>
       <ul>
         <li class="theme-card" v-for="item in officialTheme" :key="item.name">
           <theme-card 
@@ -48,7 +48,7 @@
       </ul>
     </section>
     <section class="theme-section second-section">
-      <h2><%= 2 > ({{userThemeCount}}/{{maxUserTheme}})</h2>
+      <h2>我的主题 ({{userThemeCount}}/{{maxUserTheme}})</h2>
       <ul>
         <li class="theme-card" v-if="showUserUpload">
           <theme-card 
@@ -68,7 +68,7 @@
     </section>
     <el-dialog :visible.sync="copyDialogVisible">
       <el-form :model="copyForm" ref="copyForm" :rules="copyFormRule">
-        <el-form-item label="<%= 3 >" prop="name">
+        <el-form-item label="主题名称" prop="name">
           <el-input v-model="copyForm.name"></el-input>
         </el-form-item>
       </el-form>
