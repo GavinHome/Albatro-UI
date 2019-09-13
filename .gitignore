@@ -22,3 +22,5 @@ yarn-error.log*
 *.sw?
 
 coverage
+
+/exmples/pages/zh-CN
