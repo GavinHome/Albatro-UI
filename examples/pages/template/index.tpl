@@ -298,7 +298,7 @@
         <img src="@/assets/images/theme-index-red.png" alt="">
       </div>
     </div>
-    <div class="sponsors">
+    <!--<div class="sponsors">
       <a class="sponsor" href="https://tipe.io/?ref=element" target="_blank" v-show="lang !== 'zh-CN'">
         <img width="35px" src="@/assets/images/tipe.svg" alt="tipe.io">
         <div>
@@ -313,7 +313,7 @@
           <p>炫酷的新一代活动票务系统</p>
         </div>
       </a>
-    </div>
+    </div>-->
     <div class="cards">
       <ul class="container">
         <li>

@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import { ElementUIComponent } from 'element-ui/types/component';
 
-/** ElementUI component common definition */
-// declare class ElementUIComponent extends Vue {
-//   /** Install component into Vue */
-//   static install (vue: typeof Vue): void
-// }
-
 declare class ElScrollbar extends ElementUIComponent {
   native: boolean
   wrapStyle: any

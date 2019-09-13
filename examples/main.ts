@@ -3,9 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 
 import '~/theme-albatro/src/index.scss';
-import './demo-styles/index.scss';
-import './assets/styles/common.css';
-import './assets/styles/fonts/style.css';
+import '@/demo-styles/index.scss';
+import '@/assets/styles/common.scss';
+import '@/assets/styles/fonts/style.css';
 
 import demoBlock from '@/components/demo-block.vue';
 import MainFooter from "@/components/footer.vue";

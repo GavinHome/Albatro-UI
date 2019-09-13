@@ -10,4 +10,6 @@ declare global {
       [elem: string]: any;
     }
   }
+
+  export function ga(arg1: any, arg2: any, arg3: any, arg4: any):void;
 }

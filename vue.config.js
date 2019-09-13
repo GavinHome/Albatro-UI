@@ -18,6 +18,19 @@ module.exports = {
             .rule('ts')
             .include.add(/packages/).end()
             .include.add(/examples/).end()
+
+        config.module
+            .rule('scss')
+            //.test(/\.css$/)
+            .include.add(/packages/).end()
+            .include.add(/examples/).end()
+
+        // config.module
+        //     .rule('css')
+        //     .include.add(/packages/).end()
+        //     .include.add(/examples/).end()
+        //     .use('scss')
+        //     .loader('sss-loader').end()
             
         config.module
             .rule('js')
@@ -30,7 +43,7 @@ module.exports = {
             .use('vue')
             .loader('vue-loader')
             .options({
-                preserveWhitespace:true
+                preserveWhitespace : true
             }).end()
 
         config.module

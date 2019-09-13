@@ -423,6 +423,7 @@
       }
     },
     mounted() {
+      //todo: need test
       getTestEle()
         .then(() => {
           this.$isEle = true;
@@ -467,17 +468,17 @@
 
     created() {
       const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = _ => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          const versions = JSON.parse(xhr.responseText);
-          this.versions = Object.keys(versions).reduce((prev, next) => {
-            prev[next] = versions[next];
-            return prev;
-          }, {});
-        }
-      };
-      xhr.open('GET', '/versions.json');
-      xhr.send();
+      // xhr.onreadystatechange = _ => {
+      //   if (xhr.readyState === 4 && xhr.status === 200) {
+      //     const versions = JSON.parse(xhr.responseText);
+      //     this.versions = Object.keys(versions).reduce((prev, next) => {
+      //       prev[next] = versions[next];
+      //       return prev;
+      //     }, {});
+      //   }
+      // };
+      // xhr.open('GET', '/versions.json');
+      // xhr.send();
       let primaryLast = '#409EFF';
       this.$event.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
         let primaryColor = val.global['$--color-primary'];
