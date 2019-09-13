@@ -14,10 +14,7 @@ import { use } from "element-ui/src/locale";
 import zhLocale from "element-ui/src/locale/lang/zh-CN";
 import enLocale from "element-ui/src/locale/lang/en";
 
-@Component({
-  components: {
-  }
-})
+@Component
 export default class App extends Vue {
   get lang() {
     return this.$route.path.split("/")[1] || "zh-CN";
@@ -42,6 +39,7 @@ export default class App extends Vue {
         break;
       case "en-US":
         use(enLocale);
+        break;
       default:
         use(zhLocale);
     }

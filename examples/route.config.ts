@@ -9,7 +9,7 @@ const loadDocs = function (lang: string, path: string) {
 }
 
 function getRoute(page: any, lang: any, index: any) {
-    const component = page.path === '/changelog' ? load(lang, 'changelog') : loadDocs(lang, page.path);
+    const component = page.path === "/changelog" ? load(lang, "changelog") : loadDocs(lang, page.path);
     let child = {
         path: page.path.slice(1),
         meta: {
@@ -17,11 +17,10 @@ function getRoute(page: any, lang: any, index: any) {
             description: page.description,
             lang
         },
-        name: 'component-' + lang + (page.title || page.name),
+        name: "component-" + lang + (page.title || page.name),
         component: component
     };
 
-    //route[index].children.push(child);
     return child;
 }
 
@@ -32,7 +31,7 @@ const registerRoute = (navConfig: any) => {
         route.push({
             path: `/${lang}/component`,
             redirect: `/${lang}/component/installation`,
-            component: load(lang, 'component'),
+            component: load(lang, "component"),
             children: []
         });
         navs.forEach((nav: any) => {
@@ -63,50 +62,50 @@ const generateMiscRoutes = function (lang: any) {
     let guideRoute = {
         path: `/${lang}/guide`, // 指南
         redirect: `/${lang}/guide/design`,
-        component: load(lang, 'guide'),
+        component: load(lang, "guide"),
         children: [{
-            path: 'design', // 设计原则
-            name: 'guide-design' + lang,
+            path: "design", // 设计原则
+            name: "guide-design" + lang,
             meta: { lang },
-            component: load(lang, 'design')
+            component: load(lang, "design")
         }, {
-            path: 'nav', // 导航
-            name: 'guide-nav' + lang,
+            path: "nav", // 导航
+            name: "guide-nav" + lang,
             meta: { lang },
-            component: load(lang, 'nav')
+            component: load(lang, "nav")
         }]
     };
 
     let themeRoute = {
         path: `/${lang}/theme`,
-        component: load(lang, 'theme-nav'),
+        component: load(lang, "theme-nav"),
         children: [
             {
-                path: '/', // 主题管理
-                name: 'theme' + lang,
+                path: "/", // 主题管理
+                name: "theme" + lang,
                 meta: { lang },
-                component: load(lang, 'theme')
+                component: load(lang, "theme")
             },
             {
-                path: 'preview', // 主题预览编辑
-                name: 'theme-preview-' + lang,
+                path: "preview", // 主题预览编辑
+                name: "theme-preview-" + lang,
                 meta: { lang },
-                component: load(lang, 'theme-preview')
+                component: load(lang, "theme-preview")
             }]
     };
 
     let resourceRoute = {
         path: `/${lang}/resource`, // 资源
         meta: { lang },
-        name: 'resource' + lang,
-        component: load(lang, 'resource')
+        name: "resource" + lang,
+        component: load(lang, "resource")
     };
 
     let indexRoute = {
         path: `/${lang}`, // 首页
         meta: { lang },
-        name: 'home' + lang,
-        component: load(lang, 'index')
+        name: "home" + lang,
+        component: load(lang, "index")
     };
 
     return [guideRoute, resourceRoute, themeRoute, indexRoute];
@@ -118,14 +117,14 @@ langs.forEach((lang: any) => {
     route = route.concat(generateMiscRoutes(lang.lang));
 });
 
-let userLanguage = localStorage.getItem('Albatro_LANGUAGE') || window.navigator.language || langs[0].lang;
-let defaultPath = '/' + userLanguage;
+let userLanguage = localStorage.getItem("ALBATRO_LANGUAGE") || window.navigator.language || langs[0].lang;
+let defaultPath = "/" + userLanguage;
 
 route = route.concat([{
-    path: '/',
+    path: "/",
     redirect: defaultPath
 }, {
-    path: '*',
+    path: "*",
     redirect: defaultPath
 }]);
 

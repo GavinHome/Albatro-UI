@@ -378,20 +378,18 @@
   import ThemePicker from "./theme-picker.vue";
   import AlgoliaSearch from "./search.vue";
   import compoLang from "../i18n/component.json";
-  //import Element from "main/index.js";
+  import Albatro from "main/index.js";
   import themeLoader from "./theme/loader";
   import { getTestEle } from "./theme/loader/api.js";
-  //import bus from "../bus";
   import { ACTION_USER_CONFIG_UPDATE } from "./theme/constant.js";
-
-//  const { version } = Element;
+  const { version } = Albatro;
 
   export default {
     data() {
       return {
         active: '',
         versions: [],
-        version:0,
+        version,
         verDropdownVisible: true,
         langDropdownVisible: true,
         langs: {
@@ -453,7 +451,7 @@
 
       switchLang(targetLang) {
         if (this.lang === targetLang) return;
-        localStorage.setItem('ELEMENT_LANGUAGE', targetLang);
+        localStorage.setItem('ALBATRO_LANGUAGE', targetLang);
         this.$router.push(this.$route.path.replace(this.lang, targetLang));
       },
 
@@ -468,17 +466,17 @@
 
     created() {
       const xhr = new XMLHttpRequest();
-      // xhr.onreadystatechange = _ => {
-      //   if (xhr.readyState === 4 && xhr.status === 200) {
-      //     const versions = JSON.parse(xhr.responseText);
-      //     this.versions = Object.keys(versions).reduce((prev, next) => {
-      //       prev[next] = versions[next];
-      //       return prev;
-      //     }, {});
-      //   }
-      // };
-      // xhr.open('GET', '/versions.json');
-      // xhr.send();
+      xhr.onreadystatechange = _ => {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const versions = JSON.parse(xhr.responseText);
+          this.versions = Object.keys(versions).reduce((prev, next) => {
+            prev[next] = versions[next];
+            return prev;
+          }, {});
+        }
+      };
+      xhr.open('GET', '/versions.json');
+      xhr.send();
       let primaryLast = '#409EFF';
       this.$event.$on(ACTION_USER_CONFIG_UPDATE, (val) => {
         let primaryColor = val.global['$--color-primary'];
