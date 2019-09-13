@@ -29,13 +29,6 @@ module.exports = {
       .include.add(/examples/)
       .end();
 
-    // config.module
-    //     .rule('css')
-    //     .include.add(/packages/).end()
-    //     .include.add(/examples/).end()
-    //     .use('scss')
-    //     .loader('sss-loader').end()
-
     config.module
       .rule("js")
       .include.add(/src/)
