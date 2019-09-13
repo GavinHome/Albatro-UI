@@ -1,19 +1,19 @@
 <script>
-//import bus from '../../../this.$event.js';
-import Loading from './loading';
-import DocStyle from './docStyle';
-import { updateVars } from './api.js';
-import { updateDomHeadStyle } from '../utils.js';
+//import bus from "../../../this.$event.js";
+import Loading from "./loading";
+import DocStyle from "./docStyle";
+import { updateVars } from "./api.js";
+import { updateDomHeadStyle } from "../utils.js";
 import {
   ACTION_APPLY_THEME,
   ACTION_DOWNLOAD_THEME,
   ACTION_USER_CONFIG_UPDATE
-} from '../constant.js';
+} from "../constant.js";
 import {
   loadUserThemeFromLocal,
   loadPreviewFromLocal
-} from '../localstorage.js';
-import { getActionDisplayName } from '../../theme-configurator/utils/utils';
+} from "../localstorage.js";
+import { getActionDisplayName } from "../../theme-configurator/utils/utils";
 
 export default {
   mixins: [Loading, DocStyle],
@@ -37,7 +37,7 @@ export default {
     applyStyle(res, time) {
       if (time < this.lastApply) return;
       this.updateDocs(() => {
-        updateDomHeadStyle('chalk-style', res);
+        updateDomHeadStyle("chalk-style", res);
       });
       this.lastApply = time;
     },
@@ -46,7 +46,7 @@ export default {
       updateVars(
         Object.assign({}, themeConfig, { download: true }),
         xhr => {
-          xhr.responseType = 'blob';
+          xhr.responseType = "blob";
         }
       ).then()
         .catch((err) => {
@@ -55,7 +55,7 @@ export default {
         .then(() => {
           this.triggertProgressBar(false);
         });
-      ga('send', 'event', 'ThemeConfigurator', 'Download', themeName);
+      ga("send", "event", "ThemeConfigurator", "Download", themeName);
     },
     onAction() {
       this.triggertProgressBar(true);
@@ -81,7 +81,7 @@ export default {
       this.$message.error(message);
     },
     triggertProgressBar(isLoading) {
-      this.$event.$emit('user-theme-config-loading', isLoading);
+      this.$event.$emit("user-theme-config-loading", isLoading);
     },
     updateDocs(cb) {
       window.userThemeConfig = JSON.parse(JSON.stringify(this.userConfig));
@@ -91,9 +91,9 @@ export default {
     checkLocalThemeConfig() {
       // load user local theme
       const previewConfig = loadPreviewFromLocal();
-      if (previewConfig.type === 'user') {
+      if (previewConfig.type === "user") {
         const userConfig = loadUserThemeFromLocal();
-        this.$message(getActionDisplayName('load-local-theme-config'));
+        this.$message(getActionDisplayName("load-local-theme-config"));
         const config = userConfig.filter(theme => (theme.name === previewConfig.name));
         if (config && config[0]) {
           this.userConfig = JSON.parse(config[0].theme);

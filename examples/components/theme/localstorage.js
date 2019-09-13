@@ -1,7 +1,7 @@
 import {
   ELEMENT_THEME_PREVIEW_CONFIG,
   ELEMENT_THEME_USER_CONFIG
-} from './constant';
+} from "./constant";
 
 export const saveToLocal = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));

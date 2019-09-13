@@ -36,15 +36,15 @@
 </style>
 
 <script>
-import Mixin from './mixin';
-import Input from './input';
-import { getStyleDisplayName } from '../utils/utils.js';
+import Mixin from "./mixin";
+import Input from "./input";
+import { getStyleDisplayName } from "../utils/utils.js";
 
 export default {
   data() {
     return {
       options: [],
-      value: ''
+      value: ""
     };
   },
   components: {
@@ -53,7 +53,7 @@ export default {
   mixins: [Mixin],
   computed: {
     isGlobalInputValue() {
-      return this.config.value.startsWith('$');
+      return this.config.value.startsWith("$");
     }
   },
   methods: {
@@ -65,7 +65,7 @@ export default {
       const golbalV = this.golbalValue.border;
       if (golbalV) {
         Object.keys(golbalV).forEach((font) => {
-          if (font.includes('border-radius')) {
+          if (font.includes("border-radius")) {
             const size = golbalV[font];
             this.options.push({
               value: size.key,
@@ -77,7 +77,7 @@ export default {
     }
   },
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.initSelectOption();

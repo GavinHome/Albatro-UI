@@ -12,10 +12,10 @@
 </template>
 
 <script>
-  import draggable from '../draggable';
+  import draggable from "../draggable";
 
   export default {
-    name: 'el-color-hue-slider',
+    name: "el-color-hue-slider",
 
     props: {
       color: {
@@ -34,7 +34,7 @@
 
     computed: {
       hueValue() {
-        const hue = this.color.get('hue');
+        const hue = this.color.get("hue");
         return hue;
       }
     },
@@ -74,13 +74,13 @@
           hue = Math.round((top - thumb.offsetHeight / 2) / (rect.height - thumb.offsetHeight) * 360);
         }
 
-        this.color.set('hue', hue);
+        this.color.set("hue", hue);
       },
 
       getThumbLeft() {
         if (this.vertical) return 0;
         const el = this.$el;
-        const hue = this.color.get('hue');
+        const hue = this.color.get("hue");
 
         if (!el) return 0;
         const thumb = this.$refs.thumb;
@@ -90,7 +90,7 @@
       getThumbTop() {
         if (!this.vertical) return 0;
         const el = this.$el;
-        const hue = this.color.get('hue');
+        const hue = this.color.get("hue");
 
         if (!el) return 0;
         const thumb = this.$refs.thumb;

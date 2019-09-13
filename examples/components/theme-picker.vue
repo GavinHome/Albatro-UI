@@ -22,7 +22,7 @@
 </style>
 
 <script>
-  //import Element from 'main/index.js';
+  //import Element from "main/index.js";
   const { version } = Element;
 
   const ORIGINAL_THEME = '#409EFF';

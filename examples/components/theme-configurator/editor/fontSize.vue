@@ -31,19 +31,19 @@
 
 <script>
 const defaultFontSize = [
-  '12px',
-  '13px',
-  '14px',
-  '16px',
-  '18px',
-  '20px',
-  '22px',
-  '28px',
-  '36px',
-  '48px'
+  "12px",
+  "13px",
+  "14px",
+  "16px",
+  "18px",
+  "20px",
+  "22px",
+  "28px",
+  "36px",
+  "48px"
 ];
-import Mixin from './mixin';
-import { getStyleDisplayName } from '../utils/utils.js';
+import Mixin from "./mixin";
+import { getStyleDisplayName } from "../utils/utils.js";
 
 export default {
   props: {
@@ -57,13 +57,13 @@ export default {
   data() {
     return {
       options: [],
-      value: ''
+      value: ""
     };
   },
   mixins: [Mixin],
   computed: {
     isGlobalInputValue() {
-      return this.config.value.startsWith('$');
+      return this.config.value.startsWith("$");
     }
   },
   methods: {
@@ -81,7 +81,7 @@ export default {
       const golbalTypography = this.golbalValue.typography;
       if (this.isGlobalInputValue && golbalTypography) {
         Object.keys(golbalTypography).forEach((font) => {
-          if (font.includes('font-size')) {
+          if (font.includes("font-size")) {
             const size = golbalTypography[font];
             this.options.push({
               value: size.key,
@@ -93,7 +93,7 @@ export default {
     }
   },
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.initSelectOption();

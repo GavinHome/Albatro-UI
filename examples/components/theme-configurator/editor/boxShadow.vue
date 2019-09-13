@@ -103,10 +103,10 @@
 }
 </style>
 <script>
-import Mixin from './mixin';
-import Input from './input';
-import { parse as parseShaodw, stringify as stringifyShaodw } from '../utils/boxShadow.js';
-import ColorPicker from './color-picker';
+import Mixin from "./mixin";
+import Input from "./input";
+import { parse as parseShaodw, stringify as stringifyShaodw } from "../utils/boxShadow.js";
+import ColorPicker from "./color-picker";
 
 export default {
   components: {
@@ -126,7 +126,7 @@ export default {
         offsetY: 0,
         spreadRadius: 0,
         blurRadius: 0,
-        color: 'rgba(0,0,0,0)',
+        color: "rgba(0,0,0,0)",
         inset: false
       });
     },
@@ -147,7 +147,7 @@ export default {
     }
   },
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.valueArr = parseShaodw(value);

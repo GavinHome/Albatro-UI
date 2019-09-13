@@ -111,7 +111,7 @@
 </style>
 
 <script>
-import { getActionDisplayName } from './utils/utils';
+import { getActionDisplayName } from "./utils/utils";
 export default {
   props: {
     selectOptions: Array,

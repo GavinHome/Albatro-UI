@@ -46,18 +46,18 @@
 </template>
 
 <script>
-  import SvPanel from './sv-panel';
-  import HueSlider from './hue-slider';
-  import AlphaSlider from './alpha-slider';
-  import Predefine from './predefine';
-  import ColorList from './color-list';
-  import Popper from 'element-ui/src/utils/vue-popper';
-  import Locale from 'element-ui/src/mixins/locale';
-  import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import SvPanel from "./sv-panel";
+  import HueSlider from "./hue-slider";
+  import AlphaSlider from "./alpha-slider";
+  import Predefine from "./predefine";
+  import ColorList from "./color-list";
+  import Popper from "element-ui/src/utils/vue-popper";
+  import Locale from "element-ui/src/mixins/locale";
+  import ElInput from "element-ui/packages/input";
+  import ElButton from "element-ui/packages/button";
 
   export default {
-    name: 'el-color-picker-dropdown',
+    name: "el-color-picker-dropdown",
 
     mixins: [Popper, Locale],
 
@@ -82,24 +82,24 @@
 
     data() {
       return {
-        customInput: ''
+        customInput: ""
       };
     },
 
     computed: {
       currentColor() {
         const parent = this.$parent;
-        return !parent.value && !parent.showPanelColor ? '' : parent.color.value;
+        return !parent.value && !parent.showPanelColor ? "" : parent.color.value;
       }
     },
 
     methods: {
       confirmValue() {
-        this.$emit('pick');
+        this.$emit("pick");
       },
 
       onColorListSelect(e) {
-        this.$emit('pick', e);
+        this.$emit("pick", e);
       },
 
       handleConfirm() {

@@ -149,9 +149,9 @@
   </el-scrollbar>
 </template>
 <script>
-  //import bus from '../../bus';
-  import navsData from '../../nav.config.json';
-  import throttle from 'throttle-debounce/throttle';
+  //import bus from "../../bus";
+  import navsData from "../../nav.config.json";
+  import throttle from "throttle-debounce/throttle";
 
   export default {
     data() {
@@ -165,7 +165,7 @@
       };
     },
     watch: {
-      '$route.path'() {
+      "$route.path"() {
         // 触发伪滚动条更新
         this.componentScrollBox.scrollTop = 0;
         this.$nextTick(() => {
@@ -176,11 +176,11 @@
     methods: {
       renderAnchorHref() {
         if (/changelog/g.test(location.href)) return;
-        const anchors = document.querySelectorAll('h2 a,h3 a,h4 a,h5 a');
-        const basePath = location.href.split('#').splice(0, 2).join('#');
+        const anchors = document.querySelectorAll("h2 a,h3 a,h4 a,h5 a");
+        const basePath = location.href.split("#").splice(0, 2).join("#");
 
         [].slice.call(anchors).forEach(a => {
-          const href = a.getAttribute('href');
+          const href = a.getAttribute("href");
           a.href = basePath + href;
         });
       },
@@ -207,7 +207,7 @@
           this.showHeader = true;
         }
         if (!this.navFaded) {
-          this.$event.$emit('fadeNav');
+          this.$event.$emit("fadeNav");
         }
         this.scrollTop = scrollTop;
       }
@@ -218,24 +218,24 @@
       }
     },
     created() {
-      this.$event.$on('navFade', val => {
+      this.$event.$on("navFade", val => {
        this.navFaded = val;
       });
     },
     mounted() {
       this.componentScrollBar = this.$refs.componentScrollBar;
-      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.el-scrollbar__wrap');
+      this.componentScrollBox = this.componentScrollBar.$el.querySelector(".el-scrollbar__wrap");
       this.throttledScrollHandler = throttle(300, this.handleScroll);
-      this.componentScrollBox.addEventListener('scroll', this.throttledScrollHandler);
+      this.componentScrollBox.addEventListener("scroll", this.throttledScrollHandler);
       this.renderAnchorHref();
       this.goAnchor();
-      document.body.classList.add('is-component');
+      document.body.classList.add("is-component");
     },
     destroyed() {
-      document.body.classList.remove('is-component');
+      document.body.classList.remove("is-component");
     },
     beforeDestroy() {
-      this.componentScrollBox.removeEventListener('scroll', this.throttledScrollHandler);
+      this.componentScrollBox.removeEventListener("scroll", this.throttledScrollHandler);
     },
     beforeRouteUpdate(to, from, next) {
       next();

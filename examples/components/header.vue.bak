@@ -6,10 +6,10 @@
           <router-link :to="`/${lang}`">
             <!-- logo -->
             <slot>
-              <img src="../assets/images/element-logo.svg" alt="element-logo" class="nav-logo" />
+              <img src="../assets/images/albatro-logo.svg" alt="albatro-logo" class="nav-logo" />
               <img
-                src="../assets/images/element-logo-small.svg"
-                alt="element-logo"
+                src="../assets/images/albatro-logo-small.svg"
+                alt="albatro-logo"
                 class="nav-logo-small"
               />
             </slot>

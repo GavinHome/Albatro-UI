@@ -40,9 +40,9 @@ input {
 </style>
 
 <script>
-import Mixin from './mixin';
-import { getStyleDisplayValue, getStyleDisplayName } from '../utils/utils.js';
-import ColorPicker from './color-picker';
+import Mixin from "./mixin";
+import { getStyleDisplayValue, getStyleDisplayName } from "../utils/utils.js";
+import ColorPicker from "./color-picker";
 
 export default {
   components: {
@@ -50,7 +50,7 @@ export default {
   },
   data() {
     return {
-      pickerColor: ''
+      pickerColor: ""
     };
   },
   mixins: [Mixin],
@@ -58,7 +58,7 @@ export default {
     displayValue: {
       immediate: true,
       handler(value) {
-        if (value.startsWith('#')) {
+        if (value.startsWith("#")) {
           this.pickerColor = value;
         }
       }

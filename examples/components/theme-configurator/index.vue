@@ -29,21 +29,21 @@
 </style>
 
 <script>
-//import bus from '../../bus.js';
-import { getVars } from '../theme/loader/api.js';
-import mainPanel from './main';
-import actionPanel from './action';
+//import bus from "../../bus.js";
+import { getVars } from "../theme/loader/api.js";
+import mainPanel from "./main";
+import actionPanel from "./action";
 import {
   filterConfigType,
   filterGlobalValue,
   getActionDisplayName
-} from './utils/utils.js';
-import Shortcut from './shortcut';
+} from "./utils/utils.js";
+import Shortcut from "./shortcut";
 import {
   ACTION_APPLY_THEME,
   ACTION_DOWNLOAD_THEME,
   ACTION_COMPONECT_SELECT
-} from '../theme/constant.js';
+} from "../theme/constant.js";
 
 export default {
   props: {
@@ -69,7 +69,7 @@ export default {
       userConfigRedoHistory: [],
       hasLocalConfig: false,
       selectOptions: [],
-      selectedComponent: 'color'
+      selectedComponent: "color"
     };
   },
   mixins: [Shortcut],
@@ -79,7 +79,7 @@ export default {
     }
   },
   mounted() {
-    ga('send', 'event', 'ThemeConfigurator', 'Init');
+    ga("send", "event", "ThemeConfigurator", "Init");
     this.showConfigurator();
     this.enableShortcut();
   },

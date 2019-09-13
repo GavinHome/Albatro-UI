@@ -243,15 +243,15 @@
 </template>
 
 <script>
-//import bus from '../../bus';
+//import bus from "../../bus";
 import {
   DEFAULT_THEME_CONFIG,
   ACTION_DOWNLOAD_THEME
-} from './constant.js';
-import { savePreviewToLocal } from './localstorage';
-import { tintColor } from '../../color.js';
-import dateUtil from 'element-ui/src/utils/date';
-import { getActionDisplayName } from '../theme-configurator/utils/utils';
+} from "./constant.js";
+import { savePreviewToLocal } from "./localstorage";
+import { tintColor } from "../../color.js";
+import dateUtil from "element-ui/src/utils/date";
+import { getActionDisplayName } from "../theme-configurator/utils/utils";
 
 export default {
   props: {
@@ -259,7 +259,7 @@ export default {
     type: String,
     base: {
       type: String,
-      default: ''
+      default: ""
     },
     from: String
   },
@@ -273,11 +273,11 @@ export default {
       return getActionDisplayName(key);
     },
     getDescriptionKey(name) {
-      return name ? `description-${name.toLowerCase()}` : '';
+      return name ? `description-${name.toLowerCase()}` : "";
     },
     formatDate(timestamp) {
-      if (!timestamp) return '';
-      return dateUtil.format(new Date(timestamp), 'yyyy-MM-dd HH:mm');
+      if (!timestamp) return "";
+      return dateUtil.format(new Date(timestamp), "yyyy-MM-dd HH:mm");
     },
     uploadClick() {
       this.$refs.input.value = null;
@@ -292,25 +292,25 @@ export default {
           const jsonString = e.target.result;
           const jsonObject = JSON.parse(jsonString);
           if (!jsonObject.global || !jsonObject.local) {
-            return this.$message.error('JSON format error');
+            return this.$message.error("JSON format error");
           }
-          this.$emit('action', 'upload', jsonString);
+          this.$emit("action", "upload", jsonString);
         } catch (e) {
-          this.$message.error('Upload error');
+          this.$message.error("Upload error");
           console.error(e);
         }
       };
       reader.readAsText(files[0]);
     },
     actionClick(e) {
-      this.$emit('action', e, this.config);
+      this.$emit("action", e, this.config);
     },
     iconClick(e) {
       switch (e) {
-        case 'preview':
-        case 'edit':
+        case "preview":
+        case "edit":
           if (this.from) {
-            this.$emit('action', e, this.config);
+            this.$emit("action", e, this.config);
             return;
           }
           const { name, theme } = this.config;
@@ -322,29 +322,29 @@ export default {
           this.$router.push({
             name: `theme-preview-${this.$route.meta.lang}`,
             params: {
-              refer: 'theme'
+              refer: "theme"
             }
           });
           this.$nextTick(() => {
             window.scrollTo(0, 0);
           });
           break;
-        case 'download':
+        case "download":
           this.$event.$emit(ACTION_DOWNLOAD_THEME, this.theme, this.config.name);
           break;
         default:
-          this.$emit('action', e, this.config);
+          this.$emit("action", e, this.config);
           return;
       }
     },
     deleteUserTheme() {
       this.deleteVisible = false;
-      this.$emit('action', 'delete', this.config);
+      this.$emit("action", "delete", this.config);
     }
   },
   computed: {
     isUpload() {
-      return this.type === 'upload';
+      return this.type === "upload";
     },
     theme() {
       if (this.config.theme) {
@@ -353,7 +353,7 @@ export default {
       return DEFAULT_THEME_CONFIG;
     },
     mainColor() {
-      return this.theme.global['$--color-primary'] || '#1989FA';
+      return this.theme.global["$--color-primary"] || "#1989FA";
     },
     mainColor50() {
       return tintColor(this.mainColor, 0.5);
@@ -362,42 +362,42 @@ export default {
       return tintColor(this.mainColor, 0.8);
     },
     textPrimaryColor() {
-      return this.theme.global['$--color-text-primary'] || '#303133';
+      return this.theme.global["$--color-text-primary"] || "#303133";
     },
     borderBaseColor() {
-      return this.theme.global['$--border-color-base'] || '#DCDFE6';
+      return this.theme.global["$--border-color-base"] || "#DCDFE6";
     },
     textSecondaryColor() {
-      return this.theme.global['$--color-text-secondary'] || '#909399';
+      return this.theme.global["$--color-text-secondary"] || "#909399";
     },
     isOfficial() {
-      return this.type === 'official';
+      return this.type === "official";
     },
     actionArray() {
       if (this.isOfficial) {
         return [
           {
-            icon: require('../../assets/images/icon-check.png'),
-            name: getActionDisplayName('theme-check'),
-            action: 'preview'
+            icon: require("../../assets/images/icon-check.png"),
+            name: getActionDisplayName("theme-check"),
+            action: "preview"
           },
           {
-            icon: require('../../assets/images/icon-copy.png'),
-            name: getActionDisplayName('theme-copy'),
-            action: 'copy'
+            icon: require("../../assets/images/icon-copy.png"),
+            name: getActionDisplayName("theme-copy"),
+            action: "copy"
           }
         ];
       }
       return [
         {
-          icon: require('../../assets/images/icon-edit.png'),
-          name: getActionDisplayName('theme-edit'),
-          action: 'edit'
+          icon: require("../../assets/images/icon-edit.png"),
+          name: getActionDisplayName("theme-edit"),
+          action: "edit"
         },
         {
-          icon: require('../../assets/images/icon-download.png'),
-          name: getActionDisplayName('download-theme'),
-          action: 'download'
+          icon: require("../../assets/images/icon-download.png"),
+          name: getActionDisplayName("download-theme"),
+          action: "download"
         }
       ];
     }

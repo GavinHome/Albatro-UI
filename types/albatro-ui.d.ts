@@ -1,6 +1,6 @@
-import Vue from 'vue'
+import Vue from "vue"
 
-import { AlButton } from './button'
+import { AlButton } from "./button"
 
 /** The version of albatro-ui */
 export const version: string

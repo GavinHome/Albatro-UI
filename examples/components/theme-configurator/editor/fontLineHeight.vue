@@ -31,18 +31,18 @@
 
 <script>
 const defaultFontLineHeight = [
-  '1',
-  '1.3',
-  '1.5',
-  '1.7',
-  '12px',
-  '16px',
-  '20px',
-  '24px',
-  '28px'
+  "1",
+  "1.3",
+  "1.5",
+  "1.7",
+  "12px",
+  "16px",
+  "20px",
+  "24px",
+  "28px"
 ];
-import Mixin from './mixin';
-import { getStyleDisplayName } from '../utils/utils.js';
+import Mixin from "./mixin";
+import { getStyleDisplayName } from "../utils/utils.js";
 
 export default {
   props: {
@@ -56,13 +56,13 @@ export default {
   data() {
     return {
       options: [],
-      value: ''
+      value: ""
     };
   },
   mixins: [Mixin],
   computed: {
     isGlobalInputValue() {
-      return this.config.value.startsWith('$');
+      return this.config.value.startsWith("$");
     }
   },
   methods: {
@@ -80,7 +80,7 @@ export default {
       const golbalTypography = this.golbalValue.typography;
       if (this.isGlobalInputValue && golbalTypography) {
         Object.keys(golbalTypography).forEach((font) => {
-          if (font.includes('font-line-height')) {
+          if (font.includes("font-line-height")) {
             const size = golbalTypography[font];
             this.options.push({
               value: size.key,
@@ -92,7 +92,7 @@ export default {
     }
   },
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.initSelectOption();

@@ -1,11 +1,11 @@
-import AlButton from '~/button'
+import AlButton from "~/button"
 
 const components: any = [
     AlButton
 ]
 
 const componentsName: string[] = [
-    'AlButton'
+    "AlButton"
 ]
 
 const installConfig = {

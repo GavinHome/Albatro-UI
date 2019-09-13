@@ -62,7 +62,7 @@
 </style>
 
 <script>
-  import Color from '../color';
+  import Color from  "../color";
 
   export default {
     props: {
@@ -77,13 +77,13 @@
     methods: {
       handleSelect(index) {
         this.color.fromString(this.colors[index].value);
-        this.$emit('select', this.colors[index]);
+        this.$emit("select", this.colors[index]);
       },
       parseColors(colors, color) {
         return colors.map(value => {
           const c = new Color();
           c.enableAlpha = true;
-          c.format = 'rgba';
+          c.format = "rgba";
           c.fromString(value.value);
           c.info = value;
           c.selected = c.value === color.value;
@@ -92,7 +92,7 @@
       }
     },
     watch: {
-      '$parent.currentColor'(val) {
+      "$parent.currentColor"(val) {
         const color = new Color();
         color.fromString(val);
 

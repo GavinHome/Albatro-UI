@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import Input from './input';
-import Mixin from './mixin';
+import Input from "./input";
+import Mixin from "./mixin";
 
 export default {
   components: {
@@ -25,12 +25,12 @@ export default {
   },
   data() {
     return {
-      value: ''
+      value: ""
     };
   },
   mixins: [Mixin],
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.value = this.mergedValue;

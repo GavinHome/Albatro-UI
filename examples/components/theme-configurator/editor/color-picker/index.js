@@ -1,4 +1,4 @@
-import ColorPicker from './src/main';
+import ColorPicker from "./src/main";
 
 /* istanbul ignore next */
 ColorPicker.install = function(Vue) {

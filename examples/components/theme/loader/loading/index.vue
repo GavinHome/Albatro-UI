@@ -9,8 +9,8 @@
 </style>
 <script>
 
-//import bus from '../../../../bus.js';
-import './progress.js';
+//import bus from "../../../../bus.js";
+import "./progress.js";
 
 export default {
   data() {
@@ -19,7 +19,7 @@ export default {
     };
   },
   created() {
-    this.$event.$on('user-theme-config-loading', val => {
+    this.$event.$on("user-theme-config-loading", val => {
       if (val) {
         this.count++;
         if (this.count > 1) return;

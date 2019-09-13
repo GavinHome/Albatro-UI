@@ -31,23 +31,23 @@
 
 <script>
 const defaultFontWeight = [
-  'normal',
-  'bold',
-  'bolder',
-  'lighter',
-  '100',
-  '200',
-  '300',
-  '400',
-  '500',
-  '600',
-  '700',
-  '800',
-  '900',
-  'inherit'
+  "normal",
+  "bold",
+  "bolder",
+  "lighter",
+  "100",
+  "200",
+  "300",
+  "400",
+  "500",
+  "600",
+  "700",
+  "800",
+  "900",
+  "inherit"
 ];
-import Mixin from './mixin';
-import { getStyleDisplayName } from '../utils/utils.js';
+import Mixin from "./mixin";
+import { getStyleDisplayName } from "../utils/utils.js";
 
 export default {
   props: {
@@ -61,13 +61,13 @@ export default {
   data() {
     return {
       options: [],
-      value: ''
+      value: ""
     };
   },
   mixins: [Mixin],
   computed: {
     isGlobalInputValue() {
-      return this.config.value.startsWith('$');
+      return this.config.value.startsWith("$");
     }
   },
   methods: {
@@ -85,7 +85,7 @@ export default {
       const golbalTypography = this.golbalValue.typography;
       if (this.isGlobalInputValue && golbalTypography) {
         Object.keys(golbalTypography).forEach((font) => {
-          if (font.includes('font-weight')) {
+          if (font.includes("font-weight")) {
             const weight = golbalTypography[font];
             this.options.push({
               value: weight.key,
@@ -97,7 +97,7 @@ export default {
     }
   },
   watch: {
-    'mergedValue': {
+    "mergedValue": {
       immediate: true,
       handler(value) {
         this.initSelectOption();

@@ -36,7 +36,7 @@
     }
 </style>
 <script>
-import { getStyleDisplayName } from '../utils/utils.js';
+import { getStyleDisplayName } from "../utils/utils.js";
 export default {
   props: {
     config: {
@@ -61,17 +61,17 @@ export default {
     },
     displayKeyName() {
       if (this.config.name) {
-        return this.config.key.replace('$--', '');
+        return this.config.key.replace("$--", "");
       }
-      return this.config.key.replace(`$--${this.componentName}-`, '');
+      return this.config.key.replace(`$--${this.componentName}-`, "");
     },
     isGlobal() {
-      return !this.config.value.startsWith('$');
+      return !this.config.value.startsWith("$");
     }
   },
   methods: {
     onChange(value) {
-      this.$emit('onChange', {
+      this.$emit("onChange", {
         key: this.config.key,
         value
       });

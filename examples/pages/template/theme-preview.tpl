@@ -54,15 +54,15 @@
   </div>
 </template>
 <script>
-//import bus from '../../bus.js';
-import ThemeConfigurator from '../../components/theme-configurator';
-import ComponentsPreview from '../../components/theme/components-preview';
-import BasicTokensPreview from '../../components/theme/basic-tokens-preview';
-import {  loadPreviewFromLocal,  loadUserThemeFromLocal,  saveUserThemeToLocal } from '../../components/theme/localstorage';
-import {  getThemeConfigObject } from '../../components/theme/utils';
-import {  ACTION_APPLY_THEME} from '../../components/theme/constant.js';
-import throttle from 'throttle-debounce/throttle';
-import { getActionDisplayName } from '../../components/theme-configurator/utils/utils';
+//import bus from "../../bus.js";
+import ThemeConfigurator from "../../components/theme-configurator";
+import ComponentsPreview from "../../components/theme/components-preview";
+import BasicTokensPreview from "../../components/theme/basic-tokens-preview";
+import {  loadPreviewFromLocal,  loadUserThemeFromLocal,  saveUserThemeToLocal } from "../../components/theme/localstorage";
+import {  getThemeConfigObject } from "../../components/theme/utils";
+import {  ACTION_APPLY_THEME} from "../../components/theme/constant.js";
+import throttle from "throttle-debounce/throttle";
+import { getActionDisplayName } from "../../components/theme-configurator/utils/utils";
 
 const maxUserTheme = 8;
 
@@ -84,7 +84,7 @@ export default {
   },
   computed: {
     isOfficial() {
-      return this.previewConfig.type === 'official';
+      return this.previewConfig.type === "official";
     }
   },
   created() {
@@ -116,12 +116,12 @@ export default {
       const { type, name } = this.previewConfig;
       if (this.isOfficial) {
         if (this.userTheme.length >= maxUserTheme) {
-          this.$message.error(getActionDisplayName('max-user-theme'));
+          this.$message.error(getActionDisplayName("max-user-theme"));
           return;
         }
         const autoUserName = this.getNewUserThemeName(name);
         this.previewConfig.name = autoUserName;
-        this.previewConfig.type = 'user';
+        this.previewConfig.type = "user";
         this.userTheme.push({
           update: Date.now(),
           name: autoUserName,
@@ -130,7 +130,7 @@ export default {
         saveUserThemeToLocal(this.userTheme);
         return;
       }
-      if (type === 'user') {
+      if (type === "user") {
         this.userTheme.forEach((config) => {
           if (config.name === name) {
             config.update = Date.now();
@@ -159,19 +159,19 @@ export default {
     }
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.throttledHandleScroll);
+    window.removeEventListener("scroll", this.throttledHandleScroll);
   },
   mounted() {
     this.editorHeight = window.innerHeight - 40 - 5;
-    window.addEventListener('scroll', this.throttledHandleScroll);
+    window.addEventListener("scroll", this.throttledHandleScroll);
     this.userTheme = loadUserThemeFromLocal();
     const previewConfig = loadPreviewFromLocal();
     const pageRefer = this.$route.params.refer;
     if (!previewConfig || !pageRefer) {
-      this.$alert(getActionDisplayName('no-preview-config'), getActionDisplayName('notice'), {
-        confirmButtonText: getActionDisplayName('confirm'),
+      this.$alert(getActionDisplayName("no-preview-config"), getActionDisplayName("notice"), {
+        confirmButtonText: getActionDisplayName("confirm"),
         callback: action => {
-          const newPath = this.$route.path.replace('/preview', '');
+          const newPath = this.$route.path.replace("/preview", "");
           this.$router.replace(newPath);
         }
       });

@@ -398,8 +398,8 @@
   </div>
 </template>
 <script>
-  import throttle from 'throttle-debounce/throttle';
-  import { addClass, removeClass } from 'element-ui/src/utils/dom';
+  import throttle from "throttle-debounce/throttle";
+  import { addClass, removeClass } from "element-ui/src/utils/dom";
   
   export default {
     created() {

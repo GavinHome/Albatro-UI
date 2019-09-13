@@ -104,5 +104,111 @@
                 "placeholder2": "设计资源正在整理和完善中"
             }
         }
-    }
+    },
+    {
+        "lang": "en-US",
+        "pages": {
+          "index": {
+            "1": "A Desktop UI Library",
+            "2": "Element, a Vue 2.0 based component library for developers, designers and product managers",
+            "3": "Guide",
+            "4": "Understand the design guidelines, helping designers build product that's logically sound, reasonably structured and easy to use.",
+            "5": "View Detail",
+            "6": "Component",
+            "7": "Experience interaction details by strolling through component demos. Use encapsulated code to improve developing efficiency.",
+            "8": "Resource",
+            "9": "Download relevant design resources for shaping page prototype or visual draft, increasing design efficiency.",
+            "10": "Theme",
+            "11": "Online theme roller, visualize custom and manage site themes and component styles",
+            "12": "Theme customization is available!",
+            "13": "Click here",
+            "14": "Make your own theme",
+            "lang": "en-US",
+            "titleSize": "34",
+            "paraSize": "18"
+          },
+          "component": {},
+          "theme": {
+            "1": "Official Theme",
+            "2": "My Theme",
+            "3": "Theme name"
+          },
+          "theme-preview": {
+            "1": "Back"
+          },
+          "theme-nav": {},
+          "changelog": {
+            "1": "Changelog",
+            "2": "en-US"
+          },
+          "design": {
+            "1": "Design Disciplines",
+            "2": "Consistency",
+            "3": "",
+            "4": "Feedback",
+            "5": "",
+            "6": "Efficiency",
+            "7": "",
+            "8": "Controllability",
+            "9": "",
+            "10": "Consistency",
+            "11": "Consistent with real life: ",
+            "12": "in line with the process and logic of real life, and comply with languages and habits that the users are used to.",
+            "13": "Consistent within interface: ",
+            "14": "all elements should be consistent, such as: design style, icons and texts, position of elements, etc.",
+            "15": "Feedback",
+            "16": "Operation feedback: ",
+            "17": "enable the users to clearly perceive their operations by style updates and interactive effects.",
+            "18": "Visual feedback: ",
+            "19": "reflect current state by updating or rearranging elements of the page.",
+            "20": "Efficiency",
+            "21": "Simplify the process: ",
+            "22": "keep operating process simple and intuitive.",
+            "23": "Definite and clear: ",
+            "24": "enunciate your intentions clearly so that the users can quickly understand and make decisions.",
+            "25": "Easy to identify: ",
+            "26": "the interface should be straightforward, which helps the users to identify and frees them from memorizing and recalling.",
+            "27": "Controllability",
+            "28": "Decision making: ",
+            "29": "giving advices about operations is acceptable, but do not make decisions for the users.",
+            "30": "Controlled consequences: ",
+            "31": "users should be granted the freedom to operate, including canceling, aborting or terminating current operation."
+          },
+          "guide": {
+            "1": "Design Disciplines",
+            "2": "Navigation"
+          },
+          "nav": {
+            "1": "Navigation",
+            "2": "Navigation focuses on solving the users' problems of where to go and how to get there. Generally it can be categorized into 'sidebar navigation' and 'top navigation'.",
+            "3": "Choose the right navigation",
+            "4": "An appropriate navigation gives users a smooth experience, while an inappropriate one leads to confusion. Here are the differences between sidebar navigation and top navigation",
+            "5": "Side Navigation",
+            "6": "Fix the navigation at the left edge, thus improves its visibility, making it easier to switch between pages. In this case, the top area of the page holds commonly used tools, e.g. search bar, help button, notice button, etc. Suitable for background management or utility websites.",
+            "7": "Level 1 categories",
+            "8": "Suitable for simply structured sites with only one level of pages. No breadcrumb is needed.",
+            "9": "Level 2 categories",
+            "10": "Sidebar displays up to two levels of navigation. Breadcrumbs are recommended in combination of second level navigation, making it easier for the users to locate and navigate.",
+            "11": "Level 3 categories",
+            "12": "Suitable for complicated utility websites. The left sidebar holds first level navigation, and the middle column displays second level navigation or other utility options.",
+            "13": "Top Navigation",
+            "14": "Conforms to the normal browsing order from top to bottom, which makes things more natural. The navigation amount and text length are limited to the width of the top.",
+            "15": "Suitable for sites with few navigations and large chunks."
+          },
+          "resource": {
+            "1": "Resource",
+            "2": "Under construction.",
+            "3": "Axure Components",
+            "4": "By importing Element UI in Axure, you can easily apply all the components we provide during interaction design.",
+            "5": "Download",
+            "6": "Sketch Template",
+            "7": "Apply components from Element template, so you can improve design efficiency while keeping a unified visual style.",
+            "8": "Interaction Design Documentation",
+            "9": "Take a closer look at the interaction design documentation. Learn more details of each component from a microcosmic perspective.",
+            "paraHeight": "1.6",
+            "placeholder1": "Under construction",
+            "placeholder2": "More resources are being developed"
+          }
+        }
+      }
 ]

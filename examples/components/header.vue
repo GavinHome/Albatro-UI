@@ -273,12 +273,12 @@
           <!-- logo -->
           <slot>
             <img
-              src="@/assets/images/element-logo.svg"
-              alt="element-logo"
+              src="@/assets/images/albatro-logo.svg"
+              alt="albatro-logo"
               class="nav-logo">
             <img
-              src="@/assets/images/element-logo-small.svg"
-              alt="element-logo"
+              src="@/assets/images/albatro-logo-small.svg"
+              alt="albatro-logo"
               class="nav-logo-small">
           </slot>
 
@@ -375,14 +375,14 @@
   </div>
 </template>
 <script>
-  import ThemePicker from './theme-picker.vue';
-  import AlgoliaSearch from './search.vue';
-  import compoLang from '../i18n/component.json';
-  //import Element from 'main/index.js';
-  import themeLoader from './theme/loader';
-  import { getTestEle } from './theme/loader/api.js';
-//  import bus from '../bus';
-  import { ACTION_USER_CONFIG_UPDATE } from './theme/constant.js';
+  import ThemePicker from "./theme-picker.vue";
+  import AlgoliaSearch from "./search.vue";
+  import compoLang from "../i18n/component.json";
+  //import Element from "main/index.js";
+  import themeLoader from "./theme/loader";
+  import { getTestEle } from "./theme/loader/api.js";
+  //import bus from "../bus";
+  import { ACTION_USER_CONFIG_UPDATE } from "./theme/constant.js";
 
 //  const { version } = Element;
 

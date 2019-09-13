@@ -10,8 +10,9 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-//import { use } from "../src/locale";
-//import zhLocale from "../src/locale/lang/zh-CN";
+import { use } from "element-ui/src/locale";
+import zhLocale from "element-ui/src/locale/lang/zh-CN";
+import enLocale from "element-ui/src/locale/lang/en";
 
 @Component({
   components: {
@@ -35,13 +36,15 @@ export default class App extends Vue {
   }
 
   localize(lang: any) {
-    // switch (lang) {
-    //   case "zh-CN":
-    //     use(zhLocale);
-    //     break;
-    //   default:
-    //     use(zhLocale);
-    // }
+    switch (lang) {
+      case "zh-CN":
+        use(zhLocale);
+        break;
+      case "en-US":
+        use(enLocale);
+      default:
+        use(zhLocale);
+    }
   }
 
   @Watch("lang", { immediate: true, deep: true })

@@ -35,14 +35,14 @@
 </style>
 
 <script>
-import ColorEditor from './editor/color';
-import fontWeightEditor from './editor/fontWeight';
-import fontSizeEditor from './editor/fontSize';
-import fontLineHeightEditor from './editor/fontLineHeight';
-import borderRadiusEditor from './editor/borderRadius';
-import boxShadowEditor from './editor/boxShadow';
-import simpleTextEditor from './editor/simpleText';
-import { filterConfigType } from './utils/utils.js';
+import ColorEditor from "./editor/color";
+import fontWeightEditor from "./editor/fontWeight";
+import fontSizeEditor from "./editor/fontSize";
+import fontLineHeightEditor from "./editor/fontLineHeight";
+import borderRadiusEditor from "./editor/borderRadius";
+import boxShadowEditor from "./editor/boxShadow";
+import simpleTextEditor from "./editor/simpleText";
+import { filterConfigType } from "./utils/utils.js";
 
 export default {
   components: {
@@ -82,24 +82,24 @@ export default {
   methods: {
     editorComponent(type) {
       switch (type) {
-        case 'color':
+        case "color":
           return ColorEditor;
-        case 'fontWeight':
+        case "fontWeight":
           return fontWeightEditor;
-        case 'fontSize':
+        case "fontSize":
           return fontSizeEditor;
-        case 'fontLineHeight':
+        case "fontLineHeight":
           return fontLineHeightEditor;
-        case 'borderRadius':
+        case "borderRadius":
           return borderRadiusEditor;
-        case 'boxShadow':
+        case "boxShadow":
           return boxShadowEditor;
         default:
           return simpleTextEditor;
       }
     },
     onChange(e) {
-      this.$emit('onChange', e);
+      this.$emit("onChange", e);
     },
     showCategory(name, key) {
       if (!name) {
