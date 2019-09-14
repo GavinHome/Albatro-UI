@@ -27,10 +27,10 @@ export default ${ComponentName};`
     {
         filename: path.join(PackagePath, 'index.js'),
         content: `import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
-    /* istanbul ignore next */
-    AlButton.install = function(Vue) {
-        Vue.component(AlButton.name, AlButton);
-    };
+/* istanbul ignore next */
+AlButton.install = function(Vue) {
+    Vue.component(AlButton.name, AlButton);
+};
 export default ${ComponentName};`
     },
     {
@@ -83,17 +83,19 @@ if (componentsFile[componentname]) {
     process.exit(1);
 }
 
+console.log(JSON.stringify(componentsFile))
 componentsFile[componentname] = `./packages/${componentname}/index.js`;
-fileSave(path.join(RootPath, 'components.json'))
-    .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
-    .end('\n');
+// fileSave(path.join(RootPath, 'components.json'))
+//     .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
+//     .end('\n');
+console.log(JSON.stringify(componentsFile))
 
 // 创建 package
-Files.forEach(file => {
-    fileSave(path.join(file.filename))
-        .write(file.content, 'utf8')
-        .end('\n');
-});
+// Files.forEach(file => {
+//     fileSave(path.join(file.filename))
+//         .write(file.content, 'utf8')
+//         .end('\n');
+// });
 
 // 添加到 nav.config.json
 const navConfigFile = require(path.join(RootPath, 'examples/nav.config.json'));
@@ -111,11 +113,11 @@ Object.keys(navConfigFile).forEach(lang => {
         }
     });
 });
-console.log(groupName)
-console.log(navConfigFile)
+// console.log(groupName)
+// console.log(navConfigFile)
 
-fileSave(path.join(__dirname, '../../examples/nav.config.json'))
-    .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
-    .end('\n');
+// fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+//     .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+//     .end('\n');
 
 console.log('DONE!');
