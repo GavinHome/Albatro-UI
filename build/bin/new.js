@@ -21,11 +21,20 @@ const PackagePath = path.resolve(RootPath, 'packages', componentname);
 const Files = [
     {
         filename: path.join(PackagePath, 'index.ts'),
-        content: `import ${ComponentName} from './src/main';
+        content: `import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
 export default ${ComponentName};`
     },
     {
-        filename: path.join(PackagePath, 'src/main.vue'),
+        filename: path.join(PackagePath, 'index.js'),
+        content: `import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+    /* istanbul ignore next */
+    AlButton.install = function(Vue) {
+        Vue.component(AlButton.name, AlButton);
+    };
+export default ${ComponentName};`
+    },
+    {
+        filename: path.join(PackagePath, `src/${componentname}.vue`),
         content: `<template>
   <div class="al-${componentname}"></div>
 </template>
@@ -46,7 +55,7 @@ export default class ${ComponentName} extends Vue{}
     {
         filename: path.join(RootPath, 'tests/unit/specs', `${componentname}.spec.ts`),
         content: `import { shallowMount } from "@vue/test-utils"
-// import ${ComponentName} from 'packages/${componentname}';
+// import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
 
 describe('${ComponentName}', () => {
 });
@@ -58,6 +67,12 @@ describe('${ComponentName}', () => {
 @import "common/var";
 @include b(${componentname}) {
 }`
+    },
+    {
+        filename: path.join(RootPath, 'examples/demo-styles', `${componentname}.scss`)
+    },
+    {
+        filename: path.join(RootPath, 'types', `${componentname}.d.ts`)
     }
 ];
 
@@ -68,17 +83,17 @@ if (componentsFile[componentname]) {
     process.exit(1);
 }
 
-componentsFile[componentname] = `./packages/${componentname}/index.ts`;
-// fileSave(path.join(RootPath, 'components.json'))
-//   .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
-//   .end('\n');
+componentsFile[componentname] = `./packages/${componentname}/index.js`;
+fileSave(path.join(RootPath, 'components.json'))
+    .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
+    .end('\n');
 
 // 创建 package
-// Files.forEach(file => {
-//   fileSave(path.join(file.filename))
-//     .write(file.content, 'utf8')
-//     .end('\n');
-// });
+Files.forEach(file => {
+    fileSave(path.join(file.filename))
+        .write(file.content, 'utf8')
+        .end('\n');
+});
 
 // 添加到 nav.config.json
 const navConfigFile = require(path.join(RootPath, 'examples/nav.config.json'));
@@ -99,8 +114,8 @@ Object.keys(navConfigFile).forEach(lang => {
 console.log(groupName)
 console.log(navConfigFile)
 
-// fileSave(path.join(__dirname, '../../examples/nav.config.json'))
-//   .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
-//   .end('\n');
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+    .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+    .end('\n');
 
 console.log('DONE!');

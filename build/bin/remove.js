@@ -27,7 +27,10 @@ const Files = [
     filename: path.join(rootPath, 'packages', `${componentname}/index.ts`)
   },
   {
-    filename: path.join(rootPath, 'packages', `${componentname}/src/main.vue`)
+    filename: path.join(rootPath, 'packages', `${componentname}/index.js`)
+  },
+  {
+    filename: path.join(rootPath, 'packages', `${componentname}/src/${componentname}.vue`)
   },
   {
     filename: path.join(rootPath, 'examples/docs/zh-CN', `${componentname}.md`)
@@ -39,7 +42,7 @@ const Files = [
     filename: path.join(rootPath, 'tests/unit/specs', `${componentname}.spec.ts`)
   },
   {
-    filename: path.join(rootPath, 'packages/theme-chalk/src', `${componentname}.scss`)
+    filename: path.join(rootPath, 'packages/theme-albatro/src', `${componentname}.scss`)
   },
   {
     filename: path.join(rootPath, 'examples/demo-styles', `${componentname}.scss`)
