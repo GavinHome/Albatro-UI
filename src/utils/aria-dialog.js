@@ -1,4 +1,4 @@
-import Utils from './aria-utils';
+import Utils from "./aria-utils";
 
 /**
  * @constructor
@@ -22,21 +22,26 @@ var tabEvent;
 
 aria.Dialog = function(dialog, focusAfterClosed, focusFirst) {
   this.dialogNode = dialog;
-  if (this.dialogNode === null || this.dialogNode.getAttribute('role') !== 'dialog') {
-    throw new Error('Dialog() requires a DOM element with ARIA role of dialog.');
+  if (
+    this.dialogNode === null ||
+    this.dialogNode.getAttribute("role") !== "dialog"
+  ) {
+    throw new Error(
+      "Dialog() requires a DOM element with ARIA role of dialog."
+    );
   }
 
-  if (typeof focusAfterClosed === 'string') {
+  if (typeof focusAfterClosed === "string") {
     this.focusAfterClosed = document.getElementById(focusAfterClosed);
-  } else if (typeof focusAfterClosed === 'object') {
+  } else if (typeof focusAfterClosed === "object") {
     this.focusAfterClosed = focusAfterClosed;
   } else {
     this.focusAfterClosed = null;
   }
 
-  if (typeof focusFirst === 'string') {
+  if (typeof focusFirst === "string") {
     this.focusFirst = document.getElementById(focusFirst);
-  } else if (typeof focusFirst === 'object') {
+  } else if (typeof focusFirst === "object") {
     this.focusFirst = focusFirst;
   } else {
     this.focusFirst = null;
@@ -49,18 +54,18 @@ aria.Dialog = function(dialog, focusAfterClosed, focusFirst) {
   }
 
   this.lastFocus = document.activeElement;
-  tabEvent = (e) => {
+  tabEvent = e => {
     this.trapFocus(e);
   };
   this.addListeners();
 };
 
 aria.Dialog.prototype.addListeners = function() {
-  document.addEventListener('focus', tabEvent, true);
+  document.addEventListener("focus", tabEvent, true);
 };
 
 aria.Dialog.prototype.removeListeners = function() {
-  document.removeEventListener('focus', tabEvent, true);
+  document.removeEventListener("focus", tabEvent, true);
 };
 
 aria.Dialog.prototype.closeDialog = function() {

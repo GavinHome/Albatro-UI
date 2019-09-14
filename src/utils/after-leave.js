@@ -7,7 +7,8 @@
  * @param {Boolean} once weather bind after-leave once. default value is false.
  */
 export default function(instance, callback, speed = 300, once = false) {
-  if (!instance || !callback) throw new Error('instance & callback is required');
+  if (!instance || !callback)
+    throw new Error("instance & callback is required");
   let called = false;
   const afterLeaveCallback = function() {
     if (called) return;
@@ -17,11 +18,11 @@ export default function(instance, callback, speed = 300, once = false) {
     }
   };
   if (once) {
-    instance.$once('after-leave', afterLeaveCallback);
+    instance.$once("after-leave", afterLeaveCallback);
   } else {
-    instance.$on('after-leave', afterLeaveCallback);
+    instance.$on("after-leave", afterLeaveCallback);
   }
   setTimeout(() => {
     afterLeaveCallback();
   }, speed + 100);
-};
+}
