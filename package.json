@@ -102,6 +102,7 @@
     "sass-loader": "^7.1.0",
     "transliteration": "^1.1.11",
     "ts-jest": "^23.0.0",
+    "ts-node": "^8.3.0",
     "tslib": "^1.9.0",
     "typescript": "^3.4.3",
     "uppercamelcase": "^1.1.0",
