@@ -1,5 +1,5 @@
 
-const Components = require('../components.json');
+const Components = require('../../components.json');
 
 //vue-cli-service build --target wc --dest lib --name foo-hello packages/**/index.js
 

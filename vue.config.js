@@ -15,6 +15,8 @@ module.exports = {
         }
       ])
     );
+
+    config.output.libraryExport = 'default';
   },
   chainWebpack: config => {
     // @ 默认指向 examples 目录
