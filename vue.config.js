@@ -1,5 +1,5 @@
 const path = require("path");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   pages: {
@@ -8,9 +8,13 @@ module.exports = {
     }
   },
   configureWebpack: config => {
-    config.plugins.push(new CopyWebpackPlugin([{
-        from: 'examples/versions.json'
-    }]));
+    config.plugins.push(
+      new CopyWebpackPlugin([
+        {
+          from: "examples/versions.json"
+        }
+      ])
+    );
   },
   chainWebpack: config => {
     // @ 默认指向 examples 目录
@@ -58,7 +62,7 @@ module.exports = {
       .use("custom")
       .loader(path.resolve("build", "./md-loader/index.js"))
       .end();
-    
+
     // config.plugin('CopyWebpackPlugin')
     //   .use(CopyWebpackPlugin, [{ from : /examples\/versions.json$/ }])
 
