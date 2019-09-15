@@ -2,7 +2,7 @@
     <el-slider v-bind="desc.attrs" v-model="newValue" @change="update" :show-tooltip="true"/>
 </template>
 
-<script src="./TzSuperSlider.ts">
+<script lang="ts">
 import Vue from "vue";
 import { Component, Prop } from 'vue-property-decorator'
 

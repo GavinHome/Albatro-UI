@@ -1,15 +1,7 @@
 <template>
     <div class="tz-table-dynamic">
         <div class="k-toolbar k-grid-toolbar k-grid-top" style="border-width: 1px">
-            <div class="pull-left">
-                <search-bar :isSearchAll="false" :mode="'custom'" :schemaModelFields="schemaModelFields" v-model="customDataSource"
-                            ref="searchBar" />
-            </div>
-
-            <div class="pull-right">
-                <slot v-bind:dataSource="dataSource">
-                </slot>
-            </div>
+             <slot name="toolbar" v-bind:dataSource="dataSource"/>
         </div>
 
         <el-table :row-class-name="rowClass" v-loading="loading" :data="dataSource" style="width: 100%" :highlight-current-row="true" :border="true"
@@ -45,29 +37,15 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
-import {
-    Form,
-    FormItem,
-    Input,
-    Row,
-    Col,
-    Collapse,
-    CollapseItem,
-    InputNumber,
-    Pagination,
-    Tooltip,
-    Loading,
-    Message
-} from "element-ui";
-
+import { Form, FormItem, Input, Row, Col, Collapse, CollapseItem, InputNumber, Pagination, Tooltip, Loading, Message } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import { GridColumnSchema, FieldTypeEnum, GridModelSchemaType } from "../extension/GridSchema";
-import { CustomDataSource } from "../extension/TzCustomSearch";
-import "../extension/DateExtensions";
+
+import { GridColumnSchema, FieldTypeEnum, GridModelSchemaType } from "../schema/GridSchema";
 import { encodeQueryData, IUrlParameterSchema } from "../extension/TzCommonFunc";
-//import { TzConst, TzMessageConst } from "../TzCommonConst"
+import { CustomDataSource } from "../extension/TzCustomSearch";
 import { TzFetch } from "../extension/TzFetch";
-//import SearchBar from "./SearchBar";
+import { TzMessageConst, TzConst } from "../extension/TzCommonConst";
+import "../extension/DateExtensions";
 import "../extension/StringExtensions";
 
 Vue.use(Form);
@@ -83,20 +61,16 @@ Vue.use(Tooltip);
 Vue.use(Loading);
 
 @Component({
-    props: ["fetchUrl", "columns", "pageSize", "value", "querys"],
-    components: {
-        SearchBar: require("./SearchBar.vue.html")
-    }
+    props: ["fetchUrl", "columns", "pageSize", "value", "querys"]
 })
 export default class TzTableDynamic extends Vue {
     @Prop() fetchUrl!: string;
     @Prop() columns!: GridColumnSchema[];
     @Prop() value!: any[];
     @Prop() pageSize!: number;
-    //@Prop() qparams!: IUrlParameterSchema;
     @Prop() querys!: IUrlParameterSchema;
 
-    maxNumber: number = TzConst.MaxNumber
+    //maxNumber: number = TzConst.MaxNumber
     currentPage: number = 1;
     schemaModelFields: any = {};
 
@@ -191,7 +165,7 @@ export default class TzTableDynamic extends Vue {
         onDataBinding(data: any) {
             var page = this.request.page;
             var pageSize = this.request.pageSize;
-            data.forEach((ele, i) => {
+            data.forEach((ele: any, i:number) => {
                 ele.RowNumber = (page - 1) * pageSize + i + 1;
                 for (var key in ele){
                     if(ele[key] === 'True'){
@@ -274,20 +248,20 @@ export default class TzTableDynamic extends Vue {
         }
     }
 
-    rowClass(data){
+    rowClass(data: any){
         if(!String.isNullOrEmpty(data.row.RowClass)){
             return data.row.RowClass;
         }
     }
 
-    handleSizeChange(val) {
-        console.log(`每页 ${val} 条`);
+    handleSizeChange(n:number) {
+        console.log(`每页 ${n} 条`);
     }
 
-    handleCurrentChange(val) {
-        console.log(`当前页: ${val}`);
-        this.currentPage = val;
-        this.customDataSource.request.page = val;
+    handleCurrentChange(n:number) {
+        console.log(`当前页: ${n}`);
+        this.currentPage = n;
+        this.customDataSource.request.page = n;
         this.customDataSource.filter();
     }
 
@@ -300,18 +274,12 @@ export default class TzTableDynamic extends Vue {
     }
 
     onQueryDataRefresh(data: IUrlParameterSchema, isClearSearch: boolean = true) {
-        this.customDataSource.fetchUrl =
-            this.fetchUrl + "?" + encodeQueryData(data);
-
+        this.customDataSource.fetchUrl = this.fetchUrl + "?" + encodeQueryData(data);
         if (isClearSearch) {
             this.customDataSource.filter({});
         } else {
             this.customDataSource.filter();
         }
-    }
-
-    clearSearch() {
-        (this.$refs.searchBar as SearchBar).clearText();
     }
 }
 
