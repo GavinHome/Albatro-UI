@@ -20,17 +20,18 @@ const PackagePath = path.resolve(RootPath, 'packages', componentname);
 const Files = [
     {
         filename: path.join(PackagePath, 'index.ts'),
-        content: `import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
-export default ${ComponentName};`
+        content: `import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+export default Al${ComponentName};`
     },
     {
         filename: path.join(PackagePath, 'index.js'),
-        content: `import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+        content: `import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+
 /* istanbul ignore next */
-AlButton.install = function(Vue) {
-    Vue.component(AlButton.name, AlButton);
+Al${ComponentName}.install = function(Vue) {
+    Vue.component(Al${ComponentName}.name, ${ComponentName});
 };
-export default ${ComponentName};`
+export default Al${ComponentName};`
     },
     {
         filename: path.join(PackagePath, `src/${componentname}.vue`),
@@ -40,7 +41,7 @@ export default ${ComponentName};`
 <script lang='ts'>
 import { Vue, Component } from 'vue-property-decorator'
 @Component
-export default class ${ComponentName} extends Vue{}
+export default class Al${ComponentName} extends Vue{}
 </script>`
     },
     {
@@ -54,9 +55,12 @@ export default class ${ComponentName} extends Vue{}
     {
         filename: path.join(RootPath, 'tests/unit/specs', `${componentname}.spec.ts`),
         content: `import { shallowMount } from "@vue/test-utils"
-// import ${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
 
-describe('${ComponentName}', () => {
+describe('Al${ComponentName}', () => {
+    it('mount', () => {
+        
+    });
 });
 `
     },
@@ -64,14 +68,27 @@ describe('${ComponentName}', () => {
         filename: path.join(RootPath, 'packages/theme-albatro/src', `${componentname}.scss`),
         content: `@import "mixins/mixins";
 @import "common/var";
+
 @include b(${componentname}) {
+    
 }`
     },
     {
-        filename: path.join(RootPath, 'examples/demo-styles', `${componentname}.scss`)
+        filename: path.join(RootPath, 'examples/demo-styles', `${componentname}.scss`),
+        content: `.demo-block.demo-${componentname} {
+
+}
+.demo-${componentname}{
+
+}`
     },
     {
-        filename: path.join(RootPath, 'types', `${componentname}.d.ts`)
+        filename: path.join(RootPath, 'types', `${componentname}.d.ts`),
+        content: `import { AlbatroUIComponent } from './component'
+
+/** ${ComponentName} Component */
+export declare class Al${ComponentName} extends AlbatroUIComponent {
+}`
     }
 ];
 
@@ -87,7 +104,8 @@ console.log("components.json: " + JSON.stringify(componentsFile, null, "  "));
 
 // 创建 package
 Files.forEach(file => {
-    console.log("创建文件" + file.filename);
+    console.log("创建文件：" + file.filename + "，内容：");
+    console.log("" + file.content);
 });
 
 // 添加到 nav.config.json
