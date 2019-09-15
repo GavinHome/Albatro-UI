@@ -13,8 +13,8 @@ import { Component, Prop } from 'vue-property-decorator'
 
 import { Button, Message } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
-import { TzFetch } from "../TzFetch";
-import kendoHelper from "../KendoExtensions";
+import { TzFetch } from "../extension/TzFetch";
+import kendoHelper from "../extension/KendoExtensions";
 Vue.use(Button)
 
 @Component({
@@ -59,12 +59,12 @@ export default class TzSuperAutocomplete extends Vue {
                 var request = this.desc.options.schema_meta_key.indexOf("Enum") > -1 ? { key: this.desc.options.schema_meta_key } : kendoHelper.onRequest(this.desc.options.schema, queryString)
                 TzFetch.Post(this.desc.options.remote, request, false).then((data: any) => {
                     if (data && data.Data && data.Data.length) {
-                        var results = data.Data.map(x => { return { value: x[map["value"]], ext: x[map["ext"]], key: x[map["key"]] } });
+                        var results = data.Data.map((x:any) => { return { value: x[map["value"]], ext: x[map["ext"]], key: x[map["key"]] } });
                         cb(results);
                     } else {
                         cb([]);
                     }
-                }).catch(e => {
+                }).catch((e:any) => {
                     cb([]);
                     Message.error("???????????")
                 });

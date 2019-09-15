@@ -23,7 +23,7 @@ import { Component, Prop } from "vue-property-decorator";
 
 import "@progress/kendo-ui"
 import '@progress/kendo-ui/css/web/kendo.common.min.css'
-import '@progress/kendo-ui/css/web/kendo.common.core.min.css'
+//import '@progress/kendo-ui/css/web/kendo.common.core.min.css'
 import '@progress/kendo-ui/css/web/kendo.silver.min.css'
 import '@progress/kendo-ui/js/cultures/kendo.culture.zh-CN.js'
 import '@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js'
@@ -100,7 +100,9 @@ export default class TzGridDynamic extends Vue {
     }
 
     onError(err: any) {
-        this.errorFn(err);
+        if(this.errorFn) {
+            this.errorFn(err);
+        }
     }
 
     requestStart(e: any) {

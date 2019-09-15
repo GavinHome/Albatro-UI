@@ -22,14 +22,6 @@ import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 Vue.use(ElementUI);
 
-// import AlbatroUI from "~/index";
-// Vue.use(AlbatroUI);
-
-// import AlButton from "~/index";
-// import "~/theme-albatro/src/index.scss";
-
-// Vue.use(AlButton);
-
 Vue.config.productionTip = false;
 Vue.prototype.$event = new Vue();
 Vue.prototype.$icon = require("@/icon.json"); // Icon 列表页用

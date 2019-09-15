@@ -1,5 +1,5 @@
 <template>
-    <el-input :placeholder="'请输入' + desc.label" v-model="newValue" @change="update">
+    <el-input :placeholder="'???' + desc.label" v-model="newValue" @change="update">
     </el-input>
 </template>
 
@@ -16,9 +16,12 @@ Vue.use(Input)
     model: {
         prop: 'value',
         event: 'change'
+    },
+    components: {
+        Input
     }
 })
-export default class TzSuperRate extends Vue {
+export default class TzSuperInput extends Vue {
     @Prop() desc!: any
     @Prop() value!: any
 

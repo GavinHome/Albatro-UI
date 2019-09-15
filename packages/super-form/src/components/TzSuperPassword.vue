@@ -19,7 +19,7 @@ Vue.use(Input)
         event: 'change'
     }
 })
-export default class TzSuperRate extends Vue {
+export default class TzSuperPassword extends Vue {
     @Prop() desc!: any
     @Prop() value!: any
 

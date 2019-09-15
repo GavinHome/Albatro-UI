@@ -1,9 +1,9 @@
 <template>
     <div class="tz-super-shell">
-        <template v-for="(comp) of desc.slots" v-slot:[key]>
+        <!-- <template v-for="(comp) of desc.slots" v-slot:[key]>
             <component :key="comp.type" :is="comp.type" @submit=" d => { isShow = false; comp.submit(d) }" v-bind="comp.props" v-on="comp.on" :value="comp.default">
             </component>
-        </template>
+        </template> -->
     </div>
 </template>
 

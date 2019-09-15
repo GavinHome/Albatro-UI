@@ -1,10 +1,11 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const isPlay = process.env.VUE_APP_PLAY_ENV;
 
 module.exports = {
   pages: {
     index: {
-      entry: "examples/main.ts"
+      entry: !isPlay ? "examples/main.ts" : "examples/play.ts"
     }
   },
   configureWebpack: config => {

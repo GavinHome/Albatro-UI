@@ -7,10 +7,12 @@
 import Vue from "vue";
 import { Component, Prop } from 'vue-property-decorator';
 
+import TzGridDynamic from "./TzGridDynamic.vue";
+
 @Component({
     props: ["desc"],
     components: {
-        TzGridDynamic: require("../../TzGridDynamic.vue.html")
+        TzGridDynamic
     }
 })
 export default class TzSuperGrid extends Vue {

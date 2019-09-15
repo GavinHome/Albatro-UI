@@ -54,38 +54,70 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import { TzSuperFormGroup, TzSuperFormType, TzSuperFormField, getComponentName } from "./schema/TzSuperFormSchema";
 import { TzFetch } from "./extension/TzFetch";
+import 'element-ui/lib/theme-chalk/index.css'
+import ElementUI from "element-ui";
+Vue.use(ElementUI);
+
+import TzSuperTextarea from "./components/TzSuperTextarea.vue"
+import TzSuperNumber from "./components/TzSuperNumber.vue"
+import TzSuperSelect from "./components/TzSuperSelect.vue"
+import TzSuperDialog from "./components/TzSuperDialog.vue"
+import TzSuperText from "./components/TzSuperText.vue"
+import TzSuperSwitch from "./components/TzSuperSwitch.vue"
+import TzSuperShell from "./components/TzSuperShell.vue"
+import TzSuperTime from "./components/TzSuperTime.vue"
+import TzSuperTag from "./components/TzSuperTag.vue"
+import TzSuperRadio from "./components/TzSuperRadio.vue"
+import TzSuperCheckbox from "./components/TzSuperCheckbox.vue"
+import TzSuperDate from "./components/TzSuperDate.vue"
+import TzSuperDatetime from "./components/TzSuperDatetime.vue"
+import TzSuperRate from "./components/TzSuperRate.vue"
+import TzSuperSlider from "./components/TzSuperSlider.vue"
+import TzSuperPassword from "./components/TzSuperPassword.vue"
+import TzSuperYear from "./components/TzSuperYear.vue"
+import TzSuperMonth from "./components/TzSuperMonth.vue"
+import TzSuperInput from "./components/TzSuperInput.vue"
+import TzSuperDaterange from "./components/TzSuperDateRange.vue"
+import TzSuperMonthrange from "./components/TzSuperMonthRange.vue"
+import TzSuperDatetimerange from "./components/TzSuperDateTimeRange.vue"
+import TzSuperDates from "./components/TzSuperDates.vue"
+import TzSuperWeek from "./components/TzSuperWeek.vue"
+import TzSuperTimerange from "./components/TzSuperTimeRange.vue"
+import TzSuperButton from "./components/TzSuperButton.vue"
+import TzSuperAutocomplete from "./components/TzSuperAutocomplete.vue"
+import TzSuperGrid from "./components/TzSuperGrid.vue"
 
 @Component({
     props: ["form", "formData", "rules", "isLoading", "formError", "requestFn", "isHideSubmitBtn", "isHideBackBtn", "submitBtnText", "backBtnText", "labelWidth", "single", "isCustomHandleRequest", "action", "isAutoHandlePost"],
     components: {
-        TzSuperTextarea: require('./components/TzSuperTextarea.vue'),
-        TzSuperNumber: require('./components/TzSuperNumber.vue'),
-        TzSuperSelect: require('./components/TzSuperSelect.vue'),
-        TzSuperDialog: require('./components/TzSuperDialog.vue'),
-        TzSuperText: require('./components/TzSuperText.vue'),
-        TzSuperSwitch: require('./components/TzSuperSwitch.vue'),
-        TzSuperShell: require('./components/TzSuperShell.vue'),
-        TzSuperTime: require('./components/TzSuperTime.vue'),
-        TzSuperTag: require('./components/TzSuperTag.vue'),
-        TzSuperRadio: require('./components/TzSuperRadio.vue'),
-        TzSuperCheckbox: require('./components/TzSuperCheckbox.vue'),
-        TzSuperDate: require('./components/TzSuperDate.vue'),
-        TzSuperDatetime: require('./components/TzSuperDatetime.vue'),
-        TzSuperRate: require('./components/TzSuperRate.vue'),
-        TzSuperSlider: require('./components/TzSuperSlider.vue'),
-        TzSuperPassword: require('./components/TzSuperPassword.vue'),
-        TzSuperYear: require('./components/TzSuperYear.vue'),
-        TzSuperMonth: require('./components/TzSuperMonth.vue'),
-        TzSuperInput: require('./components/TzSuperInput.vue'),
-        TzSuperDaterange: require('./components/TzSuperDateRange.vue'),
-        TzSuperMonthrange: require('./components/TzSuperMonthRange.vue'),
-        TzSuperDatetimerange: require('./components/TzSuperDateTimeRange.vue'),
-        TzSuperDates: require('./components/TzSuperDates.vue'),
-        TzSuperWeek: require('./components/TzSuperWeek.vue'),
-        TzSuperTimerange: require('./components/TzSuperTimeRange.vue'),
-        TzSuperButton: require('./components/TzSuperButton.vue'),
-        TzSuperAutocomplete: require('./components/TzSuperAutocomplete.vue'),
-        TzSuperGrid: require('./components/TzSuperGrid.vue')
+        TzSuperTextarea,
+        TzSuperNumber,
+        TzSuperSelect,
+        TzSuperDialog,
+        TzSuperText,
+        TzSuperSwitch,
+        TzSuperShell,
+        TzSuperTime,
+        TzSuperTag,
+        TzSuperRadio,
+        TzSuperCheckbox,
+        TzSuperDate,
+        TzSuperDatetime,
+        TzSuperRate,
+        TzSuperSlider,
+        TzSuperPassword,
+        TzSuperYear,
+        TzSuperMonth,
+        TzSuperInput,
+        TzSuperDaterange,
+        TzSuperMonthrange,
+        TzSuperDatetimerange,
+        TzSuperDates,
+        TzSuperWeek,
+        TzSuperTimerange,
+        TzSuperButton,
+        TzSuperAutocomplete,
+        TzSuperGrid
     }
 })
 export default class AlSuperForm extends Vue{

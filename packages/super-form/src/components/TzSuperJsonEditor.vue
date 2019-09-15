@@ -8,7 +8,7 @@ import Vue from "vue";
 import { Component, Prop, Watch } from 'vue-property-decorator'
 
 import VJsoneditor from 'v-jsoneditor'
-Vue.use(VJsoneditor)
+//Vue.use(VJsoneditor)
 
 @Component({
     props: ["value", "desc"],

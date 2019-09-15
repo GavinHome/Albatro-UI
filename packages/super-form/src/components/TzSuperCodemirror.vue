@@ -50,7 +50,7 @@ import 'codemirror/addon/fold/indent-fold.js'
 import 'codemirror/addon/fold/markdown-fold.js'
 import 'codemirror/addon/fold/xml-fold.js'
 
-Vue.use(VueCodemirror)
+//Vue.use(VueCodemirror)
 
 @Component({
     props: ["value", "mode"],
@@ -59,10 +59,10 @@ Vue.use(VueCodemirror)
         event: 'change'
     },
     components: {
-        //VueCodemirror
+        VueCodemirror
     }
 })
-export default class TzSuperJsonEditor extends Vue {
+export default class TzSuperCodemirror extends Vue {
     @Prop() value!: any
     @Prop() mode!: any
 

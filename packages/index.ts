@@ -1,11 +1,14 @@
 import AlButton from "~/button"
+import AlSuperForm from "~/super-form"
 
 const components: any = [
-    AlButton
+    AlButton,
+    AlSuperForm
 ]
 
 const componentsName: string[] = [
-    "AlButton"
+    "AlButton",
+    "AlSuperForm"
 ]
 
 const installConfig = {

@@ -18,7 +18,7 @@ Vue.use(DatePicker)
         event: 'change'
     }
 })
-export default class TzSuperDate extends Vue {
+export default class TzSuperMonth extends Vue {
     @Prop() desc!: any
     @Prop() value!: any
 

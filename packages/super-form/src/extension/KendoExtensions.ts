@@ -36,7 +36,7 @@ var kendoExtensions = {
         } else {
             let grid: TzGridDynamic = dataSource as TzGridDynamic
             if (grid) {
-                grid.dataSource.kendoDataSource.read(params)
+                (grid as any).dataSource.kendoDataSource.read(params)
             }
         }
     },
