@@ -1,5 +1,5 @@
 <template>
-    <el-date-picker placeholder="选择日期" type="date" v-bind="desc.attrs" value-format="yyyy-MM-dd" v-model="newValue" @change="update" style="width: 100%"/>
+    <el-date-picker placeholder="?????" type="date" v-bind="desc.attrs" value-format="yyyy-MM-dd" v-model="newValue" @change="update" style="width: 100%"/>
 </template>
 
 <script lang="ts">

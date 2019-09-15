@@ -1,5 +1,5 @@
 <template>
-    <el-input :placeholder="'???' + desc.label" v-model="newValue" @change="update">
+    <el-input :placeholder="'请输入' + desc.label" v-model="newValue" @change="update">
     </el-input>
 </template>
 

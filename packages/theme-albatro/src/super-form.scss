@@ -2,5 +2,11 @@
 @import "common/var";
 
 @include b(super-form) {
-
+    & .al-super-form-command {
+      margin: 15px 0px;
+      
+      .al-super-form-command__append {
+        text-align: right;
+      }
+    }
 }

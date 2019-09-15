@@ -5,7 +5,7 @@
         <!-- 默认插槽作为表单项 -->
         <slot />
 
-        <div class="single-collapse" v-if="isGroupalbe">
+        <div class="al-super-form-single" v-if="isGroupalbe">
             <el-row :gutter="24">
                 <el-col :span="field.cols ? 8 * field.cols : 8" v-for="(field) of formDesc" :key="field.key">
                     <el-form-item :label="field.label ? field.label + '：' : ''" size="medium" :prop="field.name"
@@ -20,7 +20,7 @@
             </el-row>
         </div>
 
-        <el-collapse :value="ActiveCollapses" v-else>
+        <el-collapse class="al-super-form-groups" :value="activeCollapses" v-else>
             <el-collapse-item v-for="(group) of form" :title="group.title" :name="group.name" :key="group.key">
                 <el-row :gutter="24" v-for="(row) of group.rows" :key="row.key">
                     <el-col :span="field.cols ? 8 * field.cols : 8" v-for="(field) of row.fields"
@@ -39,9 +39,9 @@
                 </el-row>
             </el-collapse-item>
         </el-collapse>
-        <el-row class="mb15 mt15">
-            <el-form-item class="text-right">
-                <slot name="button-group"></slot>
+        <el-row class="al-super-form-command">
+            <el-form-item class="al-super-form-command__append">
+                <slot name="button-group-append"></slot>
                 <el-button type="primary" :loading="isLoading || innerIsLoading" native-type="submit"
                     v-if="showSubmitBtn">{{submitBtnText?submitBtnText:'提交'}}</el-button>
                 <el-button @click="goBack" v-if="showBackBtn">{{backBtnText?backBtnText:'返回'}}</el-button>
@@ -146,7 +146,7 @@ export default class AlSuperForm extends Vue{
     // 内部请求出错
     innerFormError: any = {};
 
-    get ActiveCollapses() {
+    get activeCollapses() {
         return this.form.filter(x => !x.isCollapsed).map(x => x.name)
     }
 
