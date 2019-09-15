@@ -71,7 +71,7 @@ describe('Al${ComponentName}', () => {
 @import "common/var";
 
 @include b(${componentname}) {
-    
+
 }`
     },
     {
@@ -102,9 +102,9 @@ if (componentsFile[componentname]) {
 
 console.log(JSON.stringify(componentsFile))
 componentsFile[`${componentname}`] = `./packages/${componentname}/index.js`;
-// fileSave(path.join(RootPath, 'components.json'))
-//     .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
-//     .end('\n');
+fileSave(path.join(RootPath, 'components.json'))
+    .write(JSON.stringify(componentsFile, null, '  '), 'utf8')
+    .end('\n');
 
 // 创建 package
 Files.forEach(file => {
@@ -130,8 +130,8 @@ Object.keys(navConfigFile).forEach(lang => {
     });
 });
 
-// fileSave(path.join(__dirname, '../../examples/nav.config.json'))
-//     .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
-//     .end('\n');
+fileSave(path.join(__dirname, '../../examples/nav.config.json'))
+    .write(JSON.stringify(navConfigFile, null, '  '), 'utf8')
+    .end('\n');
 
 console.log('DONE!');
