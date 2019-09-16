@@ -51,8 +51,7 @@ module.exports = {
     config.module
       .rule("md")
       .test(/\.md$/)
-      .include.add(/examples/)
-      .end()
+      //.include.add(/examples/).end()
       .use("vue")
       .loader("vue-loader")
       .options({

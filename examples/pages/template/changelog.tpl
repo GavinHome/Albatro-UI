@@ -144,15 +144,15 @@
     </div>
     <ul class="timeline" ref="timeline">
     </ul>
-    <!--<change-log ref="changeLog"></change-log>-->
+    <change-log ref="changeLog"></change-log>
   </div>
 </template>
 <script>
-  //import ChangeLog from "../../../CHANGELOG.<%= 2 >.md";
+  import ChangeLog from "../../../CHANGELOG.<%= 2 >.md";
 
   export default {
     components: {
-      //ChangeLog
+      ChangeLog
     },
     data() {
       return {

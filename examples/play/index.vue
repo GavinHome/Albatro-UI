@@ -15,9 +15,6 @@ import Vue from "vue";
 import { Component } from 'vue-property-decorator';
 import { TzSuperFormGroup, TzSuperFormType, getFormDesc, TzSuperOptionSchema } from "../../packages/super-form/src/schema/TzSuperFormSchema";
 import { FieldTypeEnum } from "../../packages/super-form/src/schema/GridSchema";
-// import 'element-ui/lib/theme-chalk/index.css'
-// import ElementUI from 'element-ui'
-// Vue.use(ElementUI)
 
 @Component({
     props: [],
@@ -181,55 +178,39 @@ export default class Play extends Vue {
                             type: TzSuperFormType.Autocomplete,
                             title: "建议输入框",
                             format: null,
-                            //options: null,
-                            // options: [
-                            //     //local = { value: "value or label", ext: "code or tip", key:"id"}
-                            //     { value: "三全鲜食（北新泾店）", ext: "长宁区新渔路144号", key:"1" },
-                            //     { value: "Hot honey 首尔炸鸡（仙霞路）", ext: "上海市长宁区淞虹路661号", key:"2" },
-                            //     { value: "新旺角茶餐厅", ext: "上海市普陀区真北路988号创邑金沙谷6号楼113", key:"3" },
-                            //     { value: "泷千家(天山西路店)", ext: "天山西路438号", key:"4" },
-                            //     { value: "胖仙女纸杯蛋糕（上海凌空店）", ext: "上海市长宁区金钟路968号1幢18号楼一层商铺18-101", key:"5" },
-                            //     { value: "贡茶", ext: "上海市长宁区金钟路633号", key:"6" },
-                            //     { value: "豪大大香鸡排超级奶爸", ext: "上海市嘉定区曹安公路曹安路1685号", key:"7" },
-                            //     { value: "茶芝兰（奶茶，手抓饼）", ext: "上海市普陀区同普路1435号", key:"8" },
-                            //     { value: "十二泷町", ext: "上海市北翟路1444弄81号B幢-107", key:"9" },
-                            //     { value: "星移浓缩咖啡", ext: "上海市嘉定区新郁路817号", key:"10" },
-                            //     { value: "阿姨奶茶/豪大大", ext: "嘉定区曹安路1611号", key:"11" },
-                            //     { value: "新麦甜四季甜品炸鸡", ext: "嘉定区曹安公路2383弄55号", key:"12" },
-                            //     { value: "Monica摩托主题咖啡店", ext: "嘉定区江桥镇曹安公路2409号1F，2383弄62号1F", key:"13" },
-                            // ],
-                            // options: [
-                            //     { value: "三全鲜食（北新泾店）", key:"1" },
-                            //     { value: "Hot honey 首尔炸鸡（仙霞路）", key:"2" },
-                            //     { value: "新旺角茶餐厅", key:"3" },
-                            //     { value: "泷千家(天山西路店)", key:"4" },
-                            //     { value: "胖仙女纸杯蛋糕（上海凌空店）", key:"5" },
-                            //     { value: "贡茶", key:"6" },
-                            //     { value: "豪大大香鸡排超级奶爸", key:"7" },
-                            //     { value: "茶芝兰（奶茶，手抓饼）", key:"8" },
-                            //     { value: "十二泷町", key:"9" },
-                            //     { value: "星移浓缩咖啡", key:"10" },
-                            //     { value: "阿姨奶茶/豪大大", key:"11" },
-                            //     { value: "新麦甜四季甜品炸鸡", key:"12" },
-                            //     { value: "Monica摩托主题咖啡店", key:"13" },
-                            // ],
+                            options: [
+                                //local = { value: "value or label", ext: "code or tip", key:"id"}
+                                { value: "三全鲜食（北新泾店）", ext: "长宁区新渔路144号", key:"1" },
+                                { value: "Hot honey 首尔炸鸡（仙霞路）", ext: "上海市长宁区淞虹路661号", key:"2" },
+                                { value: "新旺角茶餐厅", ext: "上海市普陀区真北路988号创邑金沙谷6号楼113", key:"3" },
+                                { value: "泷千家(天山西路店)", ext: "天山西路438号", key:"4" },
+                                { value: "胖仙女纸杯蛋糕（上海凌空店）", ext: "上海市长宁区金钟路968号1幢18号楼一层商铺18-101", key:"5" },
+                                { value: "贡茶", ext: "上海市长宁区金钟路633号", key:"6" },
+                                { value: "豪大大香鸡排超级奶爸", ext: "上海市嘉定区曹安公路曹安路1685号", key:"7" },
+                                { value: "茶芝兰（奶茶，手抓饼）", ext: "上海市普陀区同普路1435号", key:"8" },
+                                { value: "十二泷町", ext: "上海市北翟路1444弄81号B幢-107", key:"9" },
+                                { value: "星移浓缩咖啡", ext: "上海市嘉定区新郁路817号", key:"10" },
+                                { value: "阿姨奶茶/豪大大", ext: "嘉定区曹安路1611号", key:"11" },
+                                { value: "新麦甜四季甜品炸鸡", ext: "嘉定区曹安公路2383弄55号", key:"12" },
+                                { value: "Monica摩托主题咖啡店", ext: "嘉定区江桥镇曹安公路2409号1F，2383弄62号1F", key:"13" },
+                            ],
+                            // options: {
+                            //     remote: "/api/Employees/GridQueryEmployees",
+                            //     schema: {
+                            //         Id: { editable: false, nullable: true, filterable: false, type: FieldTypeEnum.String },
+                            //         Name: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
+                            //         Code: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
+                            //         CompanyTypeName: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
+                            //         OrganizationName: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String }
+                            //     },
+                            //     map: {
+                            //         value: "Name",
+                            //         ext: "Code",
+                            //         key: "Id"
+                            //     }
+                            // },
                             on: {
                                 select: (data: TzSuperOptionSchema) => this.autocompleteChange(data)
-                            },
-                            options: {
-                                remote: "/api/Employees/GridQueryEmployees",
-                                schema: {
-                                    Id: { editable: false, nullable: true, filterable: false, type: FieldTypeEnum.String },
-                                    Name: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
-                                    Code: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
-                                    CompanyTypeName: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String },
-                                    OrganizationName: { editable: false, nullable: true, filterable: true, type: FieldTypeEnum.String }
-                                },
-                                map: {
-                                    value: "Name",
-                                    ext: "Code",
-                                    key: "Id"
-                                }
                             },
                             cols: 1,
                             attrs: null,

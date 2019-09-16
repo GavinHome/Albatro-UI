@@ -131,7 +131,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">
+            <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=albatro-index" target="_blank">
               <img src="@/assets/images/duohui.svg" alt="duohui">
             </a>
           </li>

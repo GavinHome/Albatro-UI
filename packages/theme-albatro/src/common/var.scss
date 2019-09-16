@@ -991,3 +991,14 @@ $--breakpoints-spec: (
   'lg-and-down': (max-width: $--xl - 1),
   'xl-only' : (min-width: $--xl),
 );
+
+
+/*Super-Form
+--------------------------*/
+$--super-form-collapse-item-content-padding: 15px !default;
+$--super-form-collapse-item-header-margin: auto 15px !default;
+$--super-form-color: #333 !default;
+$--super-form-font-weight: 700 !default;
+$--super-form-collapse-item-header-font-size: 16px !default;
+$--super-form-collapse-item-header-border-bottom-color: #dbdbde !default;
+$--super-form-label-font-weight: 700 !default;
