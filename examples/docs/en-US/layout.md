@@ -1,4 +1,5 @@
-## Layout
+## Layout (Improving)
+<!-- ## Layout
 
 Quickly and easily create layouts with the basic 24-column.
 
@@ -354,4 +355,4 @@ The classes are:
 | xl | `≥1920px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
 | tag | custom element tag | string | * | div |
 
-
+ -->

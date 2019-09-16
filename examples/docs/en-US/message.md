@@ -1,4 +1,6 @@
-## Message
+## Message (Improving)
+
+<!-- ## Message
 
 Used to show feedback after an activity. The difference with Notification is that the latter is often used to show a system level passive notification.
 
@@ -216,4 +218,4 @@ In this case you should call `Message(options)`. We have also registered methods
 `Message` and `this.$message` returns the current Message instance. To manually close the instance, you can call `close` on it.
 | Method | Description |
 | ---- | ---- |
-| close | close the Message |
+| close | close the Message | -->

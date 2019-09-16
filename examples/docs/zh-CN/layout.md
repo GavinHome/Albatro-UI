@@ -1,4 +1,5 @@
-## Layout 布局
+## Layout 布局（正在完善中）
+<!-- ## Layout 布局
 
 通过基础的 24 分栏，迅速简便地创建布局。
 
@@ -351,4 +352,4 @@ import 'element-ui/lib/theme-chalk/display.css';
 | md | `≥992px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | lg | `≥1200px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | xl | `≥1920px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
-| tag | 自定义元素标签 | string | * | div |
+| tag | 自定义元素标签 | string | * | div | -->

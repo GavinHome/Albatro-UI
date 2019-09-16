@@ -1,4 +1,6 @@
-## Dialog 对话框
+ ## Dialog 对话框（正在完善中）
+
+<!-- ## Dialog 对话框
 在保留当前页面状态的情况下，告知用户并承载相关操作。
 
 ### 基本用法
@@ -53,7 +55,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 
 :::demo
 ```html
-<!-- Table -->
+
 <el-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</el-button>
 
 <el-dialog title="收货地址" :visible.sync="dialogTableVisible">
@@ -64,7 +66,7 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
   </el-table>
 </el-dialog>
 
-<!-- Form -->
+
 <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
 
 <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
@@ -234,4 +236,4 @@ Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | open  | Dialog 打开的回调 | — |
 | opened  | Dialog 打开动画结束时的回调 | — |
 | close  | Dialog 关闭的回调 | — |
-| closed | Dialog 关闭动画结束时的回调 | — |
+| closed | Dialog 关闭动画结束时的回调 | — | -->

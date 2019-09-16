@@ -1,4 +1,6 @@
-## Tabs
+## Tabs (Improving)
+
+<!-- ## Tabs
 
 Divide data collections which are related yet belong to different types.
 
@@ -302,4 +304,4 @@ Only card type Tabs support addable & closeable.
 | disabled | whether Tab is disabled | boolean | — | false |
 | name      | identifier corresponding to the name of Tabs, representing the alias of the tab-pane | string | — | ordinal number of the tab-pane in the sequence, e.g. the first tab-pane is '1' |
 | closable  | whether Tab is closable | boolean   | — |  false  |
-| lazy  | whether Tab is lazily rendered   | boolean   | — |  false  |
+| lazy  | whether Tab is lazily rendered   | boolean   | — |  false  | -->

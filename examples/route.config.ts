@@ -118,7 +118,7 @@ langs.forEach((lang: any) => {
 });
 
 let userLanguage = localStorage.getItem("ALBATRO_LANGUAGE") || window.navigator.language || langs[0].lang;
-let defaultPath = "/" + userLanguage;
+let defaultPath = "/" + userLanguage + "/component/installation";
 
 route = route.concat([{
     path: "/",

@@ -269,7 +269,7 @@
   <div class="headerWrapper">
     <header class="header" ref="header">
       <div class="container">
-        <h1><router-link :to="`/${ lang }`">
+        <h1><router-link :to="`/${ lang }/component/installation`">
           <!-- logo -->
           <slot>
             <img
@@ -289,33 +289,31 @@
           <li class="nav-item nav-algolia-search" v-show="isComponentPage">
             <algolia-search></algolia-search>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link
               active-class="active"
               :to="`/${ lang }/guide`">{{ langConfig.guide }}
             </router-link>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <router-link
               active-class="active"
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
-          </li>
-          <li 
-            class="nav-item nav-item-theme"
-          >
+          </li> -->
+          <!-- <li class="nav-item nav-item-theme">
             <router-link
               active-class="active"
               :to="`/${ lang }/theme`">{{ langConfig.theme }}
             </router-link>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <router-link
               active-class="active"
               :to="`/${ lang }/resource`"
               exact>{{ langConfig.resource }}
             </router-link>
-          </li>
+          </li> -->
 
           <!-- gap -->
           <li class="nav-item" v-show="isComponentPage">
@@ -394,7 +392,7 @@
         langDropdownVisible: true,
         langs: {
           'zh-CN': '中文',
-          'en-US': 'English'
+          // 'en-US': 'English'
         }
       };
     },

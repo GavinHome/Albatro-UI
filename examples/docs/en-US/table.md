@@ -1,4 +1,6 @@
-## Table
+## Table (Improving)
+
+<!-- ## Table
 
 Display multiple data with similar format. You can sort, filter, compare your data in a table.
 
@@ -1916,4 +1918,4 @@ You can customize row index in `type=index` columns.
 | Name | Description |
 |------|--------|
 | — | Custom content for table columns. The scope parameter is { row, column, $index } |
-| header | Custom content for table header. The scope parameter is { column, $index } |
+| header | Custom content for table header. The scope parameter is { column, $index } | -->

@@ -1,4 +1,6 @@
-## Message 消息提示
+ ## Message 消息提示（正在完善中）
+
+<!-- ## Message 消息提示
 
 常用于主动操作后的反馈提示。与 Notification 的区别是后者更多用于系统级通知的被动提醒。
 
@@ -216,4 +218,4 @@ import { Message } from 'element-ui';
 调用 `Message` 或 `this.$message` 会返回当前 Message 的实例。如果需要手动关闭实例，可以调用它的 `close` 方法。
 | 方法名 | 说明 |
 | ---- | ---- |
-| close | 关闭当前的 Message |
+| close | 关闭当前的 Message | -->

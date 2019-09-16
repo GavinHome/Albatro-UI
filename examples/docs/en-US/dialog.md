@@ -1,4 +1,5 @@
-## Dialog
+## Dialog (Improving)
+<!-- ## Dialog
 
 Informs users while preserving the current page state.
 
@@ -55,7 +56,6 @@ The content of Dialog can be anything, even a table or a form. This example show
 :::demo
 
 ```html
-<!-- Table -->
 <el-button type="text" @click="dialogTableVisible = true">open a Table nested Dialog</el-button>
 
 <el-dialog title="Shipping address" :visible.sync="dialogTableVisible">
@@ -66,7 +66,6 @@ The content of Dialog can be anything, even a table or a form. This example show
   </el-table>
 </el-dialog>
 
-<!-- Form -->
 <el-button type="text" @click="dialogFormVisible = true">open a Form nested Dialog</el-button>
 
 <el-dialog title="Shipping address" :visible.sync="dialogFormVisible">
@@ -237,4 +236,4 @@ If the variable bound to `visible` is managed in Vuex store, the `.sync` can not
 | open | triggers when the Dialog opens | — |
 | opened | triggers when the Dialog opening animation ends | — |
 | close | triggers when the Dialog closes | — |
-| closed | triggers when the Dialog closing animation ends | — |
+| closed | triggers when the Dialog closing animation ends | — | -->

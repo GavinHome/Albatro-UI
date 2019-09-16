@@ -1,4 +1,5 @@
-## Built-in transition
+##  Built-in transition (Improving)
+<!-- ## Built-in transition
 
 You can use Element's built-in transitions directly. Before that, please read the [transition docs](https://vuejs.org/v2/api/#transition).
 
@@ -152,4 +153,4 @@ import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
 import Vue from 'vue'
 
 Vue.component(CollapseTransition.name, CollapseTransition)
-```
+``` -->
