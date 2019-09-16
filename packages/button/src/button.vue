@@ -28,7 +28,9 @@
 <script lang="ts">
 import { Component, Prop, Vue, Inject } from "vue-property-decorator";
 
-@Component
+@Component({
+  name: "AlButton"
+})
 export default class AlButton extends Vue {
   @Prop() private type!: string;
   @Prop() private size!: string;
