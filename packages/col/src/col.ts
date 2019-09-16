@@ -3,9 +3,6 @@ import Vue, { VNode } from "vue";
 
 export default Vue.extend({
     name: "AlCol",
-    data() {
-        return {}    
-    },
     props: {
         span: {
             type: Number,
@@ -52,8 +49,6 @@ export default Vue.extend({
         classList(): string[] {
             let class_prefix = "al-col";
             let classList: string[] = [];
-            // classList.push(`${class_prefix}-${this.span}`);
-            // classList.push(`${class_prefix}-offset-${this.offset}`);
 
             ['span', 'offset'].forEach(prop => {
                 var props = this.getProp(prop);

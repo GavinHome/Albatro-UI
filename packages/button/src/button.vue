@@ -29,7 +29,7 @@
 import { Component, Prop, Vue, Inject } from "vue-property-decorator";
 
 @Component({
-  name: "AlButton"
+  name: "AlButton",
 })
 export default class AlButton extends Vue {
   @Prop() private type!: string;

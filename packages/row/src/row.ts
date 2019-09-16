@@ -3,9 +3,6 @@ import Vue, { VNode } from "vue";
 
 export default Vue.extend({
     name: "AlRow",
-    data() {
-        return {}
-    },
     props: {
         tag: {
             type: String,
