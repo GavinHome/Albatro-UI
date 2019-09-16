@@ -6,9 +6,9 @@
             :request-start="requestStart" @error="onError">
         </kendo-datasource>
 
-        <div class="k-toolbar k-grid-toolbar k-grid-top">
+        <!-- <div class="k-toolbar k-grid-toolbar k-grid-top">
             <slot name="toolbar" v-bind:dataSource="dataSource"/>
-        </div>
+        </div> -->
 
         <kendo-grid :height="445" :filterable="true" :sortable="true" :data-source-ref="'remoteDataSource'" :selectable="true" 
             :pageable="true" :pageable-always-visible="true" :pageable-refresh="true" :columnMenu="true" :resizable="true"
@@ -22,9 +22,12 @@ import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
 import "@progress/kendo-ui"
-import '@progress/kendo-ui/css/web/kendo.common.min.css'
-//import '@progress/kendo-ui/css/web/kendo.common.core.min.css'
-import '@progress/kendo-ui/css/web/kendo.silver.min.css'
+import '@progress/kendo-theme-default/dist/all.css'
+
+// import '@progress/kendo-ui/css/web/kendo.common.min.css'
+// import '@progress/kendo-ui/css/web/kendo.silver.min.css'
+// //import '@progress/kendo-ui/css/web/kendo.common.core.min.css'
+
 import '@progress/kendo-ui/js/cultures/kendo.culture.zh-CN.js'
 import '@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js'
 import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
