@@ -1,14 +1,20 @@
 import AlButton from "~/button"
 import AlSuperForm from "~/super-form"
+import AlRow from "~/row"
+import AlCol from "~/col"
 
 const components: any = [
     AlButton,
-    AlSuperForm
+    AlSuperForm,
+    AlRow,
+    AlCol
 ]
 
 const componentsName: string[] = [
     "AlButton",
-    "AlSuperForm"
+    "AlSuperForm",
+    "AlRow",
+    "AlCol"
 ]
 
 const installConfig = {
