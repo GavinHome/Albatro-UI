@@ -1,5 +1,6 @@
 <template>
   <div style="margin: 20px;">
+    <h1>表单：</h1>
     <al-super-form :form="form" :form-data="formData" :label-width="100" :rules="rules" :isLoading="isLoading"
       :request-fn="handleSubmit" @request-success="handleSuccess" @request-error="handleError"
       @request-end="handleEnd" @request="handleRequest">
@@ -7,6 +8,33 @@
           <al-button type="info" @click="convertToJson">json结构化</al-button>
         </template>
     </al-super-form>
+    <h1>布局：</h1>
+    <al-row>
+    <al-col :span="24"><div class="grid-content bg-purple-dark"></div></al-col>
+    </al-row>
+    <al-row>
+    <al-col :span="12"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="12"><div class="grid-content bg-purple-light"></div></al-col>
+    </al-row>
+    <al-row>
+    <al-col :span="8"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="8"><div class="grid-content bg-purple-light"></div></al-col>
+    <al-col :span="8"><div class="grid-content bg-purple"></div></al-col>
+    </al-row>
+    <al-row>
+    <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
+    <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
+    </al-row>
+    <al-row>
+    <al-col :span="4"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="4"><div class="grid-content bg-purple-light"></div></al-col>
+    <al-col :span="4"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="4"><div class="grid-content bg-purple-light"></div></al-col>
+    <al-col :span="4"><div class="grid-content bg-purple"></div></al-col>
+    <al-col :span="4"><div class="grid-content bg-purple-light"></div></al-col>
+    </al-row>
   </div>
 </template>
 
@@ -807,3 +835,33 @@ export default class Play extends Vue {
     }
 }
 </script>
+
+
+<style lang="scss">
+  .al-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .al-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+</style>

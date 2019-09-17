@@ -32,16 +32,16 @@ import { Component, Prop, Vue, Inject } from "vue-property-decorator";
   name: "AlButton"
 })
 export default class AlButton extends Vue {
-  @Prop() private type!: string;
-  @Prop() private size!: string;
-  @Prop() private icon!: string;
-  @Prop() private nativeType!: string;
-  @Prop() private loading!: boolean;
-  @Prop() private disabled!: boolean;
-  @Prop() private plain!: boolean;
-  @Prop() private autofocus!: boolean;
-  @Prop() private round!: boolean;
-  @Prop() private circle!: boolean;
+  @Prop(String) private type!: string;
+  @Prop(String) private size!: string;
+  @Prop(String) private icon!: string;
+  @Prop(String) private nativeType!: string;
+  @Prop(Boolean) private loading!: boolean;
+  @Prop(Boolean) private disabled!: boolean;
+  @Prop(Boolean) private plain!: boolean;
+  @Prop(Boolean) private autofocus!: boolean;
+  @Prop(Boolean) private round!: boolean;
+  @Prop(Boolean) private circle!: boolean;
 
   @Inject({ default: null }) readonly elForm!: any;
   @Inject({ default: null }) readonly elFormItem!: any;

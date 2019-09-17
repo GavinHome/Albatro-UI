@@ -218,27 +218,27 @@
 
 :::demo 将 `type` 属性赋值为 'flex'，可以启用 flex 布局，并可通过 `horizontal-align` 属性来指定 start, center, end, space-between, space-around 其中的值来定义子元素的排版方式。
 ```html
-<al-row flex class="row-bg">
+<al-row class="row-bg" flex>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
 </al-row>
-<al-row flex class="row-bg" horizontal-align="center">
+<al-row class="row-bg" horizontal-align="center" flex>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
 </al-row>
-<al-row flex class="row-bg" horizontal-align="end">
+<al-row class="row-bg" horizontal-align="end" flex>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
 </al-row>
-<al-row flex class="row-bg" horizontal-align="space-between">
+<al-row class="row-bg" horizontal-align="space-between" flex>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
 </al-row>
-<al-row flex class="row-bg" horizontal-align="space-around">
+<al-row class="row-bg" horizontal-align="space-around">
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple-light"></div></al-col>
   <al-col :span="6"><div class="grid-content bg-purple"></div></al-col>

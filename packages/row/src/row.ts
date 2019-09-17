@@ -1,48 +1,33 @@
-
 import Vue, { VNode } from "vue";
+import { Component, Prop } from 'vue-property-decorator';
 
-export default Vue.extend({
-    name: "AlRow",
-    data() {
-        return {}
-    },
-    props: {
-        tag: {
-            type: String,
-            default: 'div'
-        },
-        margin: Number,
-        flex: Boolean,
-        horizontalAlign: {
-            type: String,
-            default: 'start'
-        },
-        verticalAlign: {
-            type: String,
-            default: 'top'
-        }
-    },
-    methods: {
-    },
+@Component({
+    name: "AlRow"
+})
+export default class AlRow extends Vue {
+    @Prop({ default: 'div', type: String }) private tag!: string;
+    @Prop(Number) private margin!: number;
+    @Prop(Boolean) private flex!: boolean;
+    @Prop({ default: 'start', type: String }) private horizontalAlign!: string;
+    @Prop({ default: 'top', type: String }) private verticalAlign!: string;
 
-    computed: {
-        style() {
+    get style() {
+        if (this.margin) {
             const ret = {
                 marginLeft: '0px',
                 marginRight: '0px'
             };
 
-            if (this.margin) {
-                ret.marginLeft = `-${this.margin / 2}px`;
-                ret.marginRight = ret.marginLeft;
-            }
-
+            ret.marginLeft = `-${this.margin / 2}px`;
+            ret.marginRight = ret.marginLeft;
             return ret;
+        } else {
+            return {}
         }
-    },
+    }
 
-    render(createElement): VNode {
-        return createElement(this.tag, {
+    render(h: Vue.CreateElement): VNode {
+        return h(this.tag, {
             class: [
                 'al-row',
                 this.horizontalAlign !== 'start' ? `is-horizontal-${this.horizontalAlign}` : '',
@@ -52,5 +37,4 @@ export default Vue.extend({
             style: this.style
         }, this.$slots.default)
     }
-})
-
+}

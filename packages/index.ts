@@ -1,6 +1,6 @@
 import AlButton from "~/button"
 import AlSuperForm from "~/super-form"
-import AlRow from "~/row"
+import AlRow from "~/row/index"
 import AlCol from "~/col"
 
 const components: any = [
