@@ -21,7 +21,8 @@
   & .el-collapse-item__header {
     font-size: $--super-form-collapse-item-header-font-size;
     border-bottom-color: $--super-form-collapse-item-header-border-bottom-color;
-    margin: $--super-form-collapse-item-header-margin;
+    //margin: $--super-form-collapse-item-header-margin;
+    padding: $--super-form-collapse-item-header-padding;
     color: $--super-form-color;
     font-weight: $--super-form-font-weight;
   }

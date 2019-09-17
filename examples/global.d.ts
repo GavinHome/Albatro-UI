@@ -13,3 +13,9 @@ declare module 'element-ui/src/locale/lang/zh-CN' {
 declare module 'element-ui/src/locale/lang/en' {
     export const enLocale: any;
 }
+
+// declare module "lib/packages/al-button" {
+//     export class Button extends require("vue").Vue {
+//         install (vue: typeof Vue): void
+//     }
+// }

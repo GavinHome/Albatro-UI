@@ -7,7 +7,7 @@ Object.keys(Components).forEach(key => {
     console.log(`[build] ${key}`);
     const name = `al-${key}`
     const path = `${Components[key]}`
-    exec(`vue-cli-service build --target wc --dest lib2 --no-clean --name ${name} ${path}`);
+    exec(`vue-cli-service build --target wc --dest lib/packages --no-clean --name ${name} ${path}`);
 });
 
 function exec(cmd) {

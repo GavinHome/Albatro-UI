@@ -1,6 +1,6 @@
 import Vue, { VNode } from "vue";
 import { Component, Prop } from 'vue-property-decorator';
-import AlbatroUIComponent from "~/AlbatroUIComponent"
+import AlbatroUIComponent from "~/AlbatroUIComponent";
 
 @Component({
     name: "AlContainer"
