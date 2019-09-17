@@ -9,6 +9,7 @@ import Header from '../packages/header/index.js';
 import Aside from '../packages/aside/index.js';
 import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
+import Grid from '../packages/grid/index.js';
 import locale from 'main/locale';
 
 const components = [
@@ -20,7 +21,8 @@ const components = [
   Header,
   Aside,
   Main,
-  Footer
+  Footer,
+  Grid
 ];
 
 const install = function(Vue, opts = {}) {
@@ -55,5 +57,6 @@ export default {
   Header,
   Aside,
   Main,
-  Footer
+  Footer,
+  Grid
 };

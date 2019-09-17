@@ -7,5 +7,6 @@
   "header": "./packages/header/index.js",
   "aside": "./packages/aside/index.js",
   "main": "./packages/main/index.js",
-  "footer": "./packages/footer/index.js"
+  "footer": "./packages/footer/index.js",
+  "grid": "./packages/grid/index.js"
 }
