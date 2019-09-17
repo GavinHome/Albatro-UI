@@ -11,6 +11,7 @@ export default class AlRow extends Vue {
     @Prop({ default: 'start', type: String }) private horizontalAlign!: string;
     @Prop({ default: 'top', type: String }) private verticalAlign!: string;
 
+
     get style() {
         if (this.margin) {
             const ret = {

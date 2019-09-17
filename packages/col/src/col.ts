@@ -2,7 +2,9 @@
 import Vue, { VNode } from "vue";
 import { Component, Prop } from 'vue-property-decorator';
 
-@Component
+@Component({
+    name: "AlCol"
+})
 export default class AlCol extends Vue {
     @Prop({ default: 24, type: Number }) private span!: number;
     @Prop({ default: 'div', type: String }) private tag!: string;
