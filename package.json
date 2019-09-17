@@ -17,9 +17,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --coverage -u || exit 0",
-    "clean": "rimraf lib && rimraf packages/*/lib && rimraf examples/pages/**/*.vue && rimraf tests/**/coverage && rimraf coverage && rimraf examples/pages/**/*.vue",
+    "clean": "rimraf lib && rimraf packages/*/lib && rimraf examples/pages/**/*.vue && rimraf tests/**/coverage && rimraf coverage",
     "build:icon": "node build/bin/build-icon.js",
-    "build:entry": "node build/bin/build-entry.js",
+    "build:entry": "node build/bin/build-entry.js && ts-node build/bin/build-entry.ts",
     "build:i18n": "node build/bin/build-i18n.js",
     "build:template": "node build/bin/template.js",
     "build:version": "node build/bin/version.js",
@@ -35,7 +35,14 @@
     "dev:play": "npm run clean && npm run build:file && vue-cli-service serve --mode play && npm run build:template",
     "dist": "npm run clean && npm run build:file && npm run lint && npm run build:lib && npm run build:components && npm run build:utils && npm run build:umd && npm run build:theme",
     "lib": "vue-cli-service build --target lib --name albatro-ui --dest lib src/index.js",
-    "pub": "npm run bootstrap1 && sh build/git-release.sh && sh build/release.sh && node build/bin/gen-indices.js && sh build/deploy.sh"
+    "pub": "npm run bootstrap1 && sh build/git-release.sh && sh build/release.sh && node build/bin/gen-indices.js && sh build/deploy.sh",
+    
+    "clean2": "rimraf lib2 && rimraf packages/*/lib && rimraf examples/pages/**/*.vue && rimraf tests/**/coverage && rimraf coverage",
+    "build:components2": "node build/bin/build-components2.js",
+    "build:lib2": "vue-cli-service build --target lib --dest lib2 --no-clean --name albatro-ui ./packages/index.ts",
+    "build:utils2": "cross-env BABEL_ENV=utils babel src --out-dir lib2 --ignore src/index.js",
+    "build:theme2": "node build/bin/gen-cssfiles && gulp build --gulpfile packages/theme-albatro/gulpfile.js && cp-cli packages/theme-albatro/lib lib2/theme-albatro",
+    "dist2": "npm run clean2 && npm run build:file && npm run lint && npm run build:lib2 && npm run build:components2 && npm run build:utils2 && npm run build:theme"
   },
   "repository": {
     "type": "git",

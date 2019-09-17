@@ -4,13 +4,23 @@ import Button from '../packages/button/index.js';
 import Row from '../packages/row/index.js';
 import Col from '../packages/col/index.js';
 import SuperForm from '../packages/super-form/index.js';
+import Container from '../packages/container/index.js';
+import Header from '../packages/header/index.js';
+import Aside from '../packages/aside/index.js';
+import Main from '../packages/main/index.js';
+import Footer from '../packages/footer/index.js';
 import locale from 'main/locale';
 
 const components = [
   Button,
   Row,
   Col,
-  SuperForm
+  SuperForm,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer
 ];
 
 const install = function(Vue, opts = {}) {
@@ -40,5 +50,10 @@ export default {
   Button,
   Row,
   Col,
-  SuperForm
+  SuperForm,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Footer
 };
