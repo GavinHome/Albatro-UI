@@ -11,7 +11,10 @@ import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
 import Grid from '../packages/grid/index.js';
 import Table from '../packages/table/index.js';
+import Collapse from '../packages/collapse/index.js';
+import CollapseItem from '../packages/collapse-item/index.js';
 import locale from 'main/locale';
+import CollapseTransition from 'main/transitions/collapse-transition.js';
 
 const components = [
   Button,
@@ -24,7 +27,10 @@ const components = [
   Main,
   Footer,
   Grid,
-  Table
+  Table,
+  Collapse,
+  CollapseItem,
+  CollapseTransition
 ];
 
 const install = function(Vue, opts = {}) {
@@ -51,6 +57,7 @@ export default {
   locale: locale.use,
   i18n: locale.i18n,
   install,
+  CollapseTransition,
   Button,
   Row,
   Col,
@@ -61,5 +68,7 @@ export default {
   Main,
   Footer,
   Grid,
-  Table
+  Table,
+  Collapse,
+  CollapseItem
 };

@@ -1,8 +1,8 @@
-import { addClass, removeClass } from "albatro-ui/src/utils/dom";
+import { addClass, removeClass } from "main/utils/dom";
+import Vue, { VNode } from "vue";
 
 class Transition {
-  beforeEnter(el) {
-    debugger
+  beforeEnter(el: any) {
     addClass(el, "collapse-transition");
     if (!el.dataset) el.dataset = {};
 
@@ -14,8 +14,7 @@ class Transition {
     el.style.paddingBottom = 0;
   }
 
-  enter(el) {
-    debugger
+  enter(el: any) {
     el.dataset.oldOverflow = el.style.overflow;
     if (el.scrollHeight !== 0) {
       el.style.height = el.scrollHeight + "px";
@@ -30,16 +29,14 @@ class Transition {
     el.style.overflow = "hidden";
   }
 
-  afterEnter(el) {
-    debugger
+  afterEnter(el: any) {
     // for safari: remove class then reset height is necessary
     removeClass(el, "collapse-transition");
     el.style.height = "";
     el.style.overflow = el.dataset.oldOverflow;
   }
 
-  beforeLeave(el) {
-    debugger
+  beforeLeave(el: any) {
     if (!el.dataset) el.dataset = {};
     el.dataset.oldPaddingTop = el.style.paddingTop;
     el.dataset.oldPaddingBottom = el.style.paddingBottom;
@@ -49,8 +46,7 @@ class Transition {
     el.style.overflow = "hidden";
   }
 
-  leave(el) {
-    debugger
+  leave(el: any) {
     if (el.scrollHeight !== 0) {
       // for safari: add class after set height, or it will jump to zero height suddenly, weired
       addClass(el, "collapse-transition");
@@ -60,8 +56,7 @@ class Transition {
     }
   }
 
-  afterLeave(el) {
-    debugger
+  afterLeave(el: any) {
     removeClass(el, "collapse-transition");
     el.style.height = "";
     el.style.overflow = el.dataset.oldOverflow;
@@ -70,14 +65,34 @@ class Transition {
   }
 }
 
-export default {
-  name: "AlCollapseTransition",
-  functional: true,
-  render(h, { children }) {
-    const data = {
+// export default Vue.extend({
+//   name: "AlCollapseTransition",
+//   functional: true,
+//   render(h: Vue.CreateElement, { children } : any) {
+//     const data: any = {
+//       on: new Transition()
+//     };
+
+//     return h("transition", data, children);
+//   }
+// });
+
+import { Component } from 'vue-property-decorator';
+import AlbatroUIComponent from "~/AlbatroUIComponent";
+
+@Component({
+  name: "AlCollapseTransition"
+})
+export default class AlCollapseTransition extends AlbatroUIComponent {
+  render(h: Vue.CreateElement, { children }: any): VNode {
+    const data: any = {
       on: new Transition()
     };
 
     return h("transition", data, children);
   }
-};
+
+  install(vue: Vue.VueConstructor<Vue>): void {
+    vue.component("AlCollapseTransition", AlCollapseTransition)
+  }
+}

@@ -298,22 +298,6 @@
         <img src="@/assets/images/theme-index-red.png" alt="">
       </div>
     </div>
-    <!--<div class="sponsors">
-      <a class="sponsor" href="https://tipe.io/?ref=element" target="_blank" v-show="lang !== 'zh-CN'">
-        <img width="35px" src="@/assets/images/tipe.svg" alt="tipe.io">
-        <div>
-          <p>Sponsored by Tipe.io</p>
-          <p>Next Generation API-first CMS</p>
-        </div>
-      </a>
-      <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">
-        <img width="45px" src="@/assets/images/duohui.svg" alt="duohui">
-        <div>
-          <p>Sponsored by 多会</p>
-          <p>炫酷的新一代活动票务系统</p>
-        </div>
-      </a>
-    </div>-->
     <div class="cards">
       <ul class="container">
         <li>
@@ -399,7 +383,7 @@
 </template>
 <script>
   import throttle from "throttle-debounce/throttle";
-  import { addClass, removeClass } from "element-ui/src/utils/dom";
+  import { addClass, removeClass } from "albatro-ui/src/utils/dom";
   
   export default {
     created() {

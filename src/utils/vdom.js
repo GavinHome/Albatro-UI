@@ -1,4 +1,4 @@
-import { hasOwn } from "element-ui/src/utils/util";
+import { hasOwn } from "albatro-ui/src/utils/util";
 
 export function isVNode(node) {
   return (

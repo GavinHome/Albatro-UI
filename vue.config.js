@@ -25,7 +25,8 @@ module.exports = {
     config.resolve.alias
       .set("@", path.resolve("examples"))
       .set("~", path.resolve("packages"))
-      .set("main", path.resolve("src"));
+      .set("main", path.resolve("src"))
+      .set("albatro-ui", path.resolve("./"));
 
     // 把 packages 和 examples 加入编译
     config.module

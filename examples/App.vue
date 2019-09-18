@@ -10,9 +10,9 @@
 
 <script lang="ts">
 import { Component, Vue, Watch } from "vue-property-decorator";
-import { use } from "element-ui/src/locale";
-import zhLocale from "element-ui/src/locale/lang/zh-CN";
-import enLocale from "element-ui/src/locale/lang/en";
+import { use } from "albatro-ui/src/locale";
+import zhLocale from "albatro-ui/src/locale/lang/zh-CN";
+import enLocale from "albatro-ui/src/locale/lang/en";
 
 @Component
 export default class App extends Vue {

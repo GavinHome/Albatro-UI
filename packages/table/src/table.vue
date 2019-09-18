@@ -43,8 +43,8 @@ import { encodeQueryData, IUrlParameterSchema } from "../../super-form/src/exten
 import { CustomDataSource } from "../../super-form/src/extension/TzCustomSearch";
 import { TzFetch } from "../../super-form/src/extension/TzFetch";
 import { TzMessageConst, TzConst } from "../../super-form/src/extension/TzCommonConst";
-import "../extension/DateExtensions";
-import "../extension/StringExtensions";
+import "../../super-form/src/extension/DateExtensions";
+import "../../super-form/src/extension/StringExtensions";
 
 Vue.use(Form);
 Vue.use(FormItem);
@@ -59,9 +59,10 @@ Vue.use(Tooltip);
 Vue.use(Loading);
 
 @Component({
+    name: "AlTableDynamic",
     props: ["fetchUrl", "columns", "pageSize", "value", "queryParameters"]
 })
-export default class TzTableDynamic extends Vue {
+export default class AlTableDynamic extends Vue {
     @Prop({ default: "", type: String }) fetchUrl!: string;
     @Prop({ default: [], type: [] }) columns!: GridColumnSchema[];
     @Prop({ default: [], type: [] }) value!: any[];

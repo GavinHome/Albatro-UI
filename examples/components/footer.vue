@@ -30,12 +30,12 @@
           <div class="footer-popover-title">{{ langConfig.eleme }} UED</div>
           <img src="@/assets/images/qrcode.png" alt="">
         </el-popover>
-        <i class="doc-icon-weixin elementdoc" v-popover:weixin></i>
+        <i class="doc-icon-weixin albatrodoc" v-popover:weixin></i>
         <a href="https://github.com/Gavinhome" target="_blank">
-          <i class="doc-icon-github elementdoc"></i>
+          <i class="doc-icon-github albatrodoc"></i>
         </a>
         <a :href="gitterLink" target="_blank">
-          <i class="doc-icon-gitter elementdoc"></i>
+          <i class="doc-icon-gitter albatrodoc"></i>
         </a>
       </div>
     </div>
@@ -95,7 +95,7 @@
         font-weight: bold;
       }
 
-      .elementdoc {
+      .albatrodoc {
         transition: .3s;
         display: inline-block;
         line-height: 32px;

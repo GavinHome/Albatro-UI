@@ -28,7 +28,7 @@ import '@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js'
 import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
 import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
 import { encodeQueryData, IUrlParameterSchema } from "../../super-form/src/extension/TzCommonFunc";
-import "../extension/StringExtensions";
+import "../../super-form/src/extension/StringExtensions";
 import kendoHelper from "../../super-form/src/extension/KendoExtensions";
 import { GridModelSchema, GridModelSchemaType, GridColumnSchema } from "../../super-form/src/schema/GridSchema";
 

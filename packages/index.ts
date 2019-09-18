@@ -9,7 +9,12 @@ import AlHeader from '~/header/index.ts';
 import AlAside from '~/aside/index.ts';
 import AlMain from '~/main/index.ts';
 import AlFooter from '~/footer/index.ts';
+import AlGrid from '~/grid/index.ts';
+import AlTable from '~/table/index.ts';
+import AlCollapse from '~/collapse/index.ts';
+import AlCollapseItem from '~/collapse-item/index.ts';
 import locale from 'main/locale';
+import AlCollapseTransition from 'main/transitions/collapse-transition.js';
 
 const components = [
   AlButton,
@@ -20,14 +25,19 @@ const components = [
   AlHeader,
   AlAside,
   AlMain,
-  AlFooter
+  AlFooter,
+  AlGrid,
+  AlTable,
+  AlCollapse,
+  AlCollapseItem,
+  AlCollapseTransition
 ];
 
 const install = function(vue: any, opts: any = {}) {
   locale.use(opts.locale);
   locale.i18n(opts.i18n);
 
-  components.forEach(component => {
+  components.forEach((component: any) => {
     Vue.component(component.name, component);
   });
 
@@ -47,6 +57,7 @@ export default {
   locale: locale.use,
   i18n: locale.i18n,
   install,
+  AlCollapseTransition,
 //{{list1}}
   ...components
 };

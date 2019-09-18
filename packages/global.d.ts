@@ -11,3 +11,12 @@ declare module 'main/locale' {
 
     export function i18n(fn: any): void;
 }
+
+declare module "main/transitions/collapse-transition.js" {
+    
+}
+
+declare module "main/utils/dom" {
+    export function addClass(el: any, cls: any): void;
+    export function removeClass(el: any, cls: any): void;
+}
