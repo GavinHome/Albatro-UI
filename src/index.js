@@ -10,6 +10,7 @@ import Aside from '../packages/aside/index.js';
 import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
 import Grid from '../packages/grid/index.js';
+import Table from '../packages/table/index.js';
 import locale from 'main/locale';
 
 const components = [
@@ -22,7 +23,8 @@ const components = [
   Aside,
   Main,
   Footer,
-  Grid
+  Grid,
+  Table
 ];
 
 const install = function(Vue, opts = {}) {
@@ -58,5 +60,6 @@ export default {
   Aside,
   Main,
   Footer,
-  Grid
+  Grid,
+  Table
 };

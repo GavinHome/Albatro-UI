@@ -26,10 +26,11 @@ export interface GridColumnSchema {
     sortable: boolean;
     editable: boolean;
     type: FieldTypeEnum;
-    format?: string;
     menu: boolean;
+    
+    format?: string | Function | undefined | null;
     command?: GridCommand[];
-    index: number;
+    index?: number;
     hidden?: boolean;
     values?: any[];
 }

@@ -68,6 +68,10 @@
             {
               "path": "/grid",
               "title": "Grid 动态列表"
+            },
+            {
+              "path": "/table",
+              "title": "Table 动态表格"
             }
           ]
         },
@@ -174,6 +178,10 @@
             {
               "path": "/grid",
               "title": "Grid"
+            },
+            {
+              "path": "/table",
+              "title": "Table"
             }
           ]
         },

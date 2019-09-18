@@ -7,7 +7,7 @@
 import Vue from "vue";
 import { Component, Prop } from 'vue-property-decorator';
 
-import TzGridDynamic from "./TzGridDynamic.vue";
+import TzGridDynamic from "~/grid/src/grid.vue";
 
 @Component({
     props: ["desc"],
