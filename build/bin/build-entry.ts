@@ -31,12 +31,10 @@ const install = function(vue: any, opts: any = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-};
 
-/* istanbul ignore if */
-// if (typeof window !== 'undefined' && window.Vue) {
-//   install(window.Vue);
-// }
+  Vue.prototype.$dialog = AlDialog;
+  Vue.prototype.$message = AlMessage;
+};
 
 export default {
   version: '{{version}}',
@@ -44,7 +42,6 @@ export default {
   i18n: locale.i18n,
   install,
   AlCollapseTransition,
-//{{list1}}
   ...components
 };
 `;
@@ -65,7 +62,7 @@ ComponentNames.forEach(name => {
     package: name
   }));
 
-  if (['Loading', 'MessageBox', 'Notification', 'Message'].indexOf(componentName) === -1) {
+  if (['Loading', 'Dialog', 'Message'].indexOf(componentName) === -1) {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName,
       component: name

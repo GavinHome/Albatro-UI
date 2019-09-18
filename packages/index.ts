@@ -13,6 +13,8 @@ import AlGrid from '~/grid/index.ts';
 import AlTable from '~/table/index.ts';
 import AlCollapse from '~/collapse/index.ts';
 import AlCollapseItem from '~/collapse-item/index.ts';
+import AlDialog from '~/dialog/index.ts';
+import AlMessage from '~/message/index.ts';
 import locale from 'main/locale';
 import AlCollapseTransition from 'main/transitions/collapse-transition.js';
 
@@ -45,12 +47,10 @@ const install = function(vue: any, opts: any = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
-};
 
-/* istanbul ignore if */
-// if (typeof window !== 'undefined' && window.Vue) {
-//   install(window.Vue);
-// }
+  Vue.prototype.$dialog = AlDialog;
+  Vue.prototype.$message = AlMessage;
+};
 
 export default {
   version: '0.1.0',
@@ -58,6 +58,5 @@ export default {
   i18n: locale.i18n,
   install,
   AlCollapseTransition,
-//{{list1}}
   ...components
 };

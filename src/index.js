@@ -13,6 +13,8 @@ import Grid from '../packages/grid/index.js';
 import Table from '../packages/table/index.js';
 import Collapse from '../packages/collapse/index.js';
 import CollapseItem from '../packages/collapse-item/index.js';
+import Dialog from '../packages/dialog/index.js';
+import Message from '../packages/message/index.js';
 import locale from 'main/locale';
 import CollapseTransition from 'main/transitions/collapse-transition.js';
 
@@ -45,6 +47,9 @@ const install = function(Vue, opts = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
+
+  Vue.prototype.$dialog = Dialog;
+  Vue.prototype.$message = Message;
 };
 
 /* istanbul ignore if */
@@ -70,5 +75,7 @@ export default {
   Grid,
   Table,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Dialog,
+  Message
 };

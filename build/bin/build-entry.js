@@ -31,6 +31,9 @@ const install = function(Vue, opts = {}) {
     size: opts.size || '',
     zIndex: opts.zIndex || 2000
   };
+
+  Vue.prototype.$dialog = Dialog;
+  Vue.prototype.$message = Message;
 };
 
 /* istanbul ignore if */
@@ -64,7 +67,7 @@ ComponentNames.forEach(name => {
     package: name
   }));
 
-  if (['Loading', 'MessageBox', 'Notification', 'Message'].indexOf(componentName) === -1) {
+  if (['Loading', 'Dialog', 'Message'].indexOf(componentName) === -1) {
     installTemplate.push(render(INSTALL_COMPONENT_TEMPLATE, {
       name: componentName,
       component: name
