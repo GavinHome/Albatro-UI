@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/GavinHome/Albatro-UI/tree/master/examples/assets/images/albatro_logo.svg">
+  <img src="https://raw.githubusercontent.com/GavinHome/Albatro-UI/master/examples/assets/images/albatro-logo.svg?sanitize=true">
 </p>
 
 > A Vue.js 2.0 UI Toolkit for Web.
