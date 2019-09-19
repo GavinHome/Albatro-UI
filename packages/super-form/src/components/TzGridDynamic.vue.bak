@@ -22,16 +22,16 @@ import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
 import "@progress/kendo-ui"
-import '@progress/kendo-theme-default/dist/all.css'
+import "@progress/kendo-theme-default/dist/all.css"
 
-// import '@progress/kendo-ui/css/web/kendo.common.min.css'
-// import '@progress/kendo-ui/css/web/kendo.silver.min.css'
-// //import '@progress/kendo-ui/css/web/kendo.common.core.min.css'
+// import "@progress/kendo-ui/css/web/kendo.common.min.css"
+// import "@progress/kendo-ui/css/web/kendo.silver.min.css"
+// //import "@progress/kendo-ui/css/web/kendo.common.core.min.css"
 
-import '@progress/kendo-ui/js/cultures/kendo.culture.zh-CN.js'
-import '@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js'
-import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
-import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
+import "@progress/kendo-ui/js/cultures/kendo.culture.zh-CN.js"
+import "@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js"
+import { GridInstaller } from "@progress/kendo-grid-vue-wrapper"
+import { DataSourceInstaller } from "@progress/kendo-datasource-vue-wrapper"
 import { encodeQueryData, IUrlParameterSchema } from "../extension/TzCommonFunc";
 import "../extension/StringExtensions";
 import kendoHelper from "../extension/KendoExtensions";
@@ -110,7 +110,7 @@ export default class TzGridDynamic extends Vue {
 
     requestStart(e: any) {
         var params = encodeQueryData(this.querys);
-        e.sender.options.transport.read.url = this.transport_read_url + (params ? "?" + params : '')
+        e.sender.options.transport.read.url = this.transport_read_url + (params ? "?" + params : "")
     }
 }
 

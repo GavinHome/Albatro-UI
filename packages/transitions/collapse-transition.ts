@@ -77,7 +77,7 @@ class Transition {
 //   }
 // });
 
-import { Component } from 'vue-property-decorator';
+import { Component } from "vue-property-decorator";
 import AlbatroUIComponent from "~/AlbatroUIComponent";
 
 @Component({

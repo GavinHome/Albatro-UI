@@ -1,4 +1,4 @@
-import { AlbatroUIComponent } from './component'
+import { AlbatroUIComponent } from "./component"
 
 /** Horizontal alignment of flex layout */
 export type HorizontalAlignment = 'start' | 'end' | 'center' | 'space-around' | 'space-between'

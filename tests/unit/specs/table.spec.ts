@@ -1,9 +1,6 @@
-import { shallowMount } from "@vue/test-utils"
-import AlTable from '~/table/src/table.vue';
+import { shallowMount } from "@vue/test-utils";
+import AlTable from "~/table/src/table.vue";
 
-describe('AlTable', () => {
-    it('mount', () => {
-        
-    });
+describe("AlTable", () => {
+  it("mount", () => {});
 });
-

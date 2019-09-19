@@ -1,4 +1,4 @@
-import { AlbatroUIComponent } from './component'
+import { AlbatroUIComponent } from "./component"
 
 /** Responsive column props */
 export interface ResponsiveColumnProperties {

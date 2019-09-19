@@ -20,12 +20,12 @@ const PackagePath = path.resolve(RootPath, 'packages', componentname);
 const Files = [
     {
         filename: path.join(PackagePath, 'index.ts'),
-        content: `import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+        content: `import Al${ComponentName} from "~/${componentname}/src/${componentname}.vue";
 export default Al${ComponentName};`
     },
     {
         filename: path.join(PackagePath, 'index.js'),
-        content: `import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+        content: `import Al${ComponentName} from "~/${componentname}/src/${componentname}.vue";
 
 /* istanbul ignore next */
 Al${ComponentName}.install = function(Vue) {
@@ -39,7 +39,7 @@ export default Al${ComponentName};`
   <div class="al-${componentname}"></div>
 </template>
 <script lang='ts'>
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from "vue-property-decorator"
 @Component
 export default class Al${ComponentName} extends Vue{}
 </script>`
@@ -55,7 +55,7 @@ export default class Al${ComponentName} extends Vue{}
     {
         filename: path.join(RootPath, 'tests/unit/specs', `${componentname}.spec.ts`),
         content: `import { shallowMount } from "@vue/test-utils"
-import Al${ComponentName} from '~/${componentname}/src/${componentname}.vue';
+import Al${ComponentName} from "~/${componentname}/src/${componentname}.vue";
 
 describe('Al${ComponentName}', () => {
     it('mount', () => {
@@ -84,7 +84,7 @@ describe('Al${ComponentName}', () => {
     },
     {
         filename: path.join(RootPath, 'types', `${componentname}.d.ts`),
-        content: `import { AlbatroUIComponent } from './component'
+        content: `import { AlbatroUIComponent } from "./component"
 
 /** ${ComponentName} Component */
 export declare class Al${ComponentName} extends AlbatroUIComponent {

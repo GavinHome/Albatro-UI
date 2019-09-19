@@ -21,10 +21,10 @@
 在 main.js 中写入以下内容：
 
 ```javascript
-import Vue from 'vue';
-import AlbatroUI from 'albatro-ui';
+import Vue from "vue";
+import AlbatroUI from "albatro-ui";
 import 'albatro-ui/lib/theme-albatro/index.css';
-import App from './App.vue';
+import App from "./App.vue";
 
 Vue.use(AlbatroUI);
 
@@ -66,9 +66,9 @@ npm install babel-plugin-component -D
 接下来，如果你只希望引入部分组件，比如 Button 和 SuperForm，那么需要在 main.js 中写入以下内容：
 
 ```javascript
-import Vue from 'vue';
-import { Button, SuperForm } from 'albatro-ui';
-import App from './App.vue';
+import Vue from "vue";
+import { Button, SuperForm } from "albatro-ui";
+import App from "./App.vue";
 
 Vue.component(Button.name, Button);
 Vue.component(SuperForm.name, SuperForm);
@@ -86,11 +86,11 @@ new Vue({
 完整组件列表和引入方式（完整组件列表以 [components.json](https://github.com/GavinHome/albatro/blob/master/components.json) 为准）
 
 ```javascript
-import Vue from 'vue';
+import Vue from "vue";
 import {
   Button,
   SuperForm
-} from 'albatro-ui';
+} from "albatro-ui";
 
 Vue.use(Button);
 Vue.use(SuperForm);
@@ -103,16 +103,16 @@ Vue.use(SuperForm);
 完整引入 Albatro ：
 
 ```js
-import Vue from 'vue';
-import Albatro from 'albatro-ui';
+import Vue from "vue";
+import Albatro from "albatro-ui";
 Vue.use(Albatro, { size: 'small', zIndex: 3000 });
 ```
 
 按需引入 Albatro ：
 
 ```js
-import Vue from 'vue';
-import { Button } from 'albatro-ui';
+import Vue from "vue";
+import { Button } from "albatro-ui";
 
 Vue.prototype.$ALBATRO = { size: 'small', zIndex: 3000 };
 Vue.use(Button);

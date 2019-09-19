@@ -21,10 +21,10 @@ You can import Albatro entirely, or just import what you need. Let's start with 
 In main.js:
 
 ```javascript
-import Vue from 'vue';
-import AlbatroUI from 'albatro-ui';
-import 'quickstart-ui/lib/theme-albatro/index.css';
-import App from './App.vue';
+import Vue from "vue";
+import AlbatroUI from "albatro-ui";
+import "quickstart-ui/lib/theme-albatro/index.css";
+import App from "./App.vue";
 
 Vue.use(AlbatroUI);
 
@@ -66,9 +66,9 @@ Then edit .babelrc:
 Next, if you need Button and SuperForm, edit main.js:
 
 ```javascript
-import Vue from 'vue';
-import { Button, SuperForm } from 'albatro-ui';
-import App from './App.vue';
+import Vue from "vue";
+import { Button, SuperForm } from "albatro-ui";
+import App from "./App.vue";
 
 Vue.component(Button.name, Button);
 Vue.component(SuperForm.name, SuperForm);
@@ -86,11 +86,11 @@ new Vue({
 Full example (Component list reference [components.json](https://github.com/GavinHome/Albatro-UI/blob/master/components.json))
 
 ```javascript
-import Vue from 'vue';
+import Vue from "vue";
 import {
   Button,
   SuperForm
-} from 'albatro-ui';
+} from "albatro-ui";
 
 Vue.use(Button);
 Vue.use(SuperForm);
@@ -104,16 +104,16 @@ When importing Albatro, you can define a global config object. For now this obje
 Fully import Albatro
 
 ```js
-import Vue from 'vue';
-import Albatro from 'albatro-ui';
+import Vue from "vue";
+import Albatro from "albatro-ui";
 Vue.use(Albatro, { size: 'small', zIndex: 3000 });
 ```
 
 Partial import Albatro
 
 ```js
-import Vue from 'vue';
-import { Button } from 'albatro-ui';
+import Vue from "vue";
+import { Button } from "albatro-ui";
 
 Vue.prototype.$ALBATRO = { size: 'small', zIndex: 3000 };
 Vue.use(Button);

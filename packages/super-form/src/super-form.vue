@@ -51,7 +51,7 @@
   </div>
 </template>
 <script lang='ts'>
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop } from "vue-property-decorator"
 import { TzSuperFormGroup, TzSuperFormType, TzSuperFormField, getComponentName } from "./schema/TzSuperFormSchema";
 import { TzFetch } from "./extension/TzFetch";
 import 'element-ui/lib/theme-chalk/index.css'

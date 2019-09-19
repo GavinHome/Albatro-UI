@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop, Watch } from 'vue-property-decorator'
+import { Component, Prop, Watch } from "vue-property-decorator"
 
 import { Select, Option } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";

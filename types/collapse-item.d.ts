@@ -1,5 +1,5 @@
-import { VNode } from 'vue'
-import { AlbatroUIComponent } from './component'
+import { VNode } from "vue";
+import { AlbatroUIComponent } from "./component";
 
 export interface CollapseItemSlots {
   /** Content of the collapse item */

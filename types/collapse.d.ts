@@ -1,4 +1,4 @@
-import { AlbatroUIComponent } from './component'
+import { AlbatroUIComponent } from "./component"
 
 /** Collapse Component */
 export declare class AlCollapse extends AlbatroUIComponent {

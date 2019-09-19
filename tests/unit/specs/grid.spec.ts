@@ -1,9 +1,6 @@
-import { shallowMount } from "@vue/test-utils"
-import AlGrid from '~/grid/src/grid.vue';
+import { shallowMount } from "@vue/test-utils";
+import AlGrid from "~/grid/src/grid.vue";
 
-describe('AlGrid', () => {
-    it('mount', () => {
-        
-    });
+describe("AlGrid", () => {
+  it("mount", () => {});
 });
-

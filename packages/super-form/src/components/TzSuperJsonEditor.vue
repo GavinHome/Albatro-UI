@@ -5,9 +5,9 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { Component, Prop, Watch } from 'vue-property-decorator'
+import { Component, Prop, Watch } from "vue-property-decorator"
 
-import VJsoneditor from 'v-jsoneditor'
+import VJsoneditor from "v-jsoneditor"
 //Vue.use(VJsoneditor)
 
 @Component({

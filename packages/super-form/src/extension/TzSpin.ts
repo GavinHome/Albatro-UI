@@ -1,4 +1,4 @@
-import { Loading } from 'element-ui';
+import { Loading } from "element-ui";
 var unique: any;
 export default {
     show() {

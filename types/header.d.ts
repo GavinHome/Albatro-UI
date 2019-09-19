@@ -1,4 +1,4 @@
-import { AlbatroUIComponent } from './component'
+import { AlbatroUIComponent } from "./component"
 
 /** Header Component */
 export declare class AlHeader extends AlbatroUIComponent {

@@ -1,14 +1,14 @@
 import Vue from "vue"
 
 import { AlButton } from "./button"
-import { AlCol } from './col'
-import { AlRow } from './row'
+import { AlCol } from "./col"
+import { AlRow } from "./row"
 
 import { AlContainer } from "./container"
-import { AlHeader } from './header'
-import { AlAside } from './aside'
-import { AlMain } from './main'
-import { AlFooter } from './footer'
+import { AlHeader } from "./header"
+import { AlAside } from "./aside"
+import { AlMain } from "./main"
+import { AlFooter } from "./footer"
 
 /** The version of albatro-ui */
 export const version: string

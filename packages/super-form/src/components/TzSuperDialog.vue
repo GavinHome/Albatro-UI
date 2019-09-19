@@ -17,7 +17,7 @@
 <script lang="ts">
 
 import Vue from "vue";
-import { Component, Prop } from 'vue-property-decorator'
+import { Component, Prop } from "vue-property-decorator"
 
 import { Input, Button, Dialog } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";

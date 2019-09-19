@@ -1,6 +1,6 @@
 import { Message } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css"
-import { MessageType } from 'element-ui/types/message';
+import { MessageType } from "element-ui/types/message";
 
 interface IMessage {
     show(message: string, type?: MessageType, showClose?: boolean, duration?: number): void;

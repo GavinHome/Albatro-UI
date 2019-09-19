@@ -1,7 +1,7 @@
-import AlGrid from '~/grid/src/grid.vue';
+import AlGrid from "~/grid/src/grid.vue";
 
 /* istanbul ignore next */
 AlGrid.install = function(Vue) {
-    Vue.component(AlGrid.name, Grid);
+  Vue.component(AlGrid.name, Grid);
 };
 export default AlGrid;

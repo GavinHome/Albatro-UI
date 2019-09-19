@@ -1,6 +1,6 @@
 
 import Vue, { VNode } from "vue";
-import { Component, Prop } from 'vue-property-decorator';
+import { Component, Prop } from "vue-property-decorator";
 
 @Component({
     name: "AlCol"

@@ -25,8 +25,8 @@ import '@progress/kendo-theme-default/dist/all.css'
 import '@progress/kendo-ui/js/cultures/kendo.culture.zh-CN.js'
 import '@progress/kendo-ui/js/messages/kendo.messages.zh-CN.js'
 
-import { GridInstaller } from '@progress/kendo-grid-vue-wrapper'
-import { DataSourceInstaller } from '@progress/kendo-datasource-vue-wrapper'
+import { GridInstaller } from "@progress/kendo-grid-vue-wrapper"
+import { DataSourceInstaller } from "@progress/kendo-datasource-vue-wrapper"
 import { encodeQueryData, IUrlParameterSchema } from "../../super-form/src/extension/TzCommonFunc";
 import "../../super-form/src/extension/StringExtensions";
 import kendoHelper from "../../super-form/src/extension/KendoExtensions";

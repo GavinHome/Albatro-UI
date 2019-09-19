@@ -45,14 +45,14 @@
   </div>
 </template>
 <script>
-  import AlCollapseTransition from 'albatro-ui/src/transitions/collapse-transition';
-  import Emitter from 'albatro-ui/src/mixins/emitter';
-  import { generateId } from 'albatro-ui/src/utils/util';
+  import AlCollapseTransition from "albatro-ui/src/transitions/collapse-transition";
+  import Emitter from "albatro-ui/src/mixins/emitter";
+  import { generateId } from "albatro-ui/src/utils/util";
 
   export default {
-    name: 'AlCollapseItem',
+    name: "AlCollapseItem",
 
-    componentName: 'AlCollapseItem',
+    componentName: "AlCollapseItem",
 
     mixins: [Emitter],
 
@@ -61,8 +61,8 @@
     data() {
       return {
         contentWrapStyle: {
-          height: 'auto',
-          display: 'block'
+          height: "auto",
+          display: "block"
         },
         contentHeight: 0,
         focusing: false,
@@ -71,7 +71,7 @@
       };
     },
 
-    inject: ['collapse'],
+    inject: ["collapse"],
 
     props: {
       title: String,
@@ -102,12 +102,12 @@
       },
       handleHeaderClick() {
         if (this.disabled) return;
-        this.dispatch('AlCollapse', 'item-click', this);
+        this.dispatch("AlCollapse", "item-click", this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
-        this.dispatch('AlCollapse', 'item-click', this);
+        this.dispatch("AlCollapse", "item-click", this);
       }
     }
   };

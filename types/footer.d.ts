@@ -1,4 +1,4 @@
-import { AlbatroUIComponent } from './component'
+import { AlbatroUIComponent } from "./component"
 
 /** Footer Component */
 export declare class AlFooter extends AlbatroUIComponent {
