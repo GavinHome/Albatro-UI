@@ -1,39 +1,52 @@
-# albatro-ui
+<p align="center">
+  <img src="https://github.com/GavinHome/Albatro-UI/tree/master/examples/assets/images/albatro_logo.svg">
+</p>
 
-## Project setup
-```
-npm install
-```
+> A Vue.js 2.0 UI Toolkit for Web.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Links
+- [Element](https://github.com/ElemeFE/element)
+- [FAQ](./FAQ.md)
 
-### Compiles and minifies for production
-```
-npm run build
+## Install
+```shell
+npm install albatro-ui -S
 ```
 
-### Run your tests
-```
-npm run test
-```
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import Albatro from 'albatro-ui'
 
-### Lints and fixes files
-```
-npm run lint
-```
+Vue.use(Albatro)
 
-### Run your unit tests
-```
-npm run test:unit
-```
+// or
+import {
+  SuperForm,
+  Button
+  // ...
+} from 'albatro-ui'
 
-### Build your lib
+Vue.component(SuperForm.name, SuperForm)
+Vue.component(Button.name, Button)
 ```
-npm run lib
-```
+For more information, please refer to [Quick Start](http://arbatro.github.io/#/en-US/component/quickstart) in our documentation.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Browser Support
+Modern browsers and Internet Explorer 10+.
+
+## Changelog
+Detailed changes for each release are documented in the [release notes](https://github.com/GavinHome/albatro-ui/releases).
+
+## FAQ
+We have collected some [frequently asked questions](https://github.com/GavinHome/albatro-ui/blob/master/FAQ.md). Before reporting an issue, please search if the FAQ has the answer to your problem.
+
+## Join Discussion Group
+
+Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
+
+<img alt="Join Discusion Group" src="/albatro-dingding.png" width="300">
+
+
+## LICENSE
+[MIT](LICENSE)
